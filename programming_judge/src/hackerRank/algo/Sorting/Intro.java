@@ -13,16 +13,11 @@ public class Intro {
 		ArrayList<Integer> ar = new ArrayList<Integer>();
 		Path path = FileSystems.getDefault().getPath("data_set", "input.txt");
 		Scanner in;
-		try {
-			in = new Scanner(System.in);
-			v = in.nextInt();
-			n = in.nextInt();
-			for(int i = 0 ; i < n; i++){
-				ar.add(in.nextInt());
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		in = new Scanner(System.in);
+		v = in.nextInt();
+		n = in.nextInt();
+		for(int i = 0 ; i < n; i++){
+			ar.add(in.nextInt());
 		}
 		System.out.println(ar.indexOf(v));
 		
