@@ -8,7 +8,7 @@ import java.util.*;
 public class Kruskal {
 	public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-		int n, m;
+		int n, m = 0;
 		Graph g = new Graph();
 		
 		Path path = FileSystems.getDefault().getPath("data_set", "input.txt");
@@ -31,12 +31,15 @@ public class Kruskal {
 			e.printStackTrace();
 		}
 		
-		Graph ret = new Graph();
-		ret.nodes.putAll(g.nodes);
+		Graph ret = new Graph(m);
 		g.edges.sort((p1, p2) -> p1.compareTo(p2));
 		g.edges.forEach(f -> {
-			if( !isCyclic(ret, f)){
+			Integer start = ret.nodeCount.get(f.start);
+			Integer end = ret.nodeCount.get(f.end);
+			if( (start+1) < 2 || (end+1) < 2){
 				ret.edges.add(f);
+				ret.nodeCount.put(f.start, start+1);
+				ret.nodeCount.put(f.end, end+1);
 			}
 		});
 		
@@ -44,11 +47,6 @@ public class Kruskal {
 		sum = ret.edges.stream().mapToInt(i -> i.weight).sum();
 		
 		System.out.println(sum);
-		
-		
     }
 	
-	public static boolean isCyclic(Graph g, Edge new_edge){
-		return false;
-	}
 }
