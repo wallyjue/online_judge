@@ -23,7 +23,7 @@ namespace online_judge.leetcode.medium
 			maps.Add('9', "wxyz".ToCharArray());
 
 			Dictionary<int, List<string>> returns = new Dictionary<int, List<string>>();
-			List<string> temp = new List<string>();
+			List<string> temp;
 			for (int inputcnt = 0; inputcnt < input.Length; inputcnt++){
 
 				var origin = returns.GetValueOrDefault(inputcnt-1);
