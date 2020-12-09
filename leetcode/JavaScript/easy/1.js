@@ -26,3 +26,4 @@ var twoSum = function(nums, target) {
 };
 
 var problem = new twoSum([2, 7, 11, 15], 9);
+problem.forEach( (x) => process.stdout.write(x.toString()));
