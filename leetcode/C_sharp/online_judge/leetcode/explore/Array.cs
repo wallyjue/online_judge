@@ -94,5 +94,44 @@ namespace online_judge.leetcode.explore
 
             return arr;
         }
+
+        public void Merge(int[] nums1, int m, int[] nums2, int n)
+        {
+            if (n == 0)
+            {
+                ;
+            }
+            else if (m == 0)
+            {
+                for (int cnt = 0; cnt < n ; cnt++)
+                {
+                    nums1[cnt] = nums2[cnt];
+                }
+            }
+            else
+            {
+                int copyTo = m + n - 1;
+                for (int cnt1 = m - 1, cnt2 = n - 1; copyTo >= 0; copyTo--)
+                {
+                    if (nums2[cnt2] >= nums1[cnt1])
+                    {   
+                        nums1[copyTo] = nums2[cnt2];
+                        nums2[cnt2] = int.MinValue;
+                        if (cnt2 > 0)cnt2--;
+                    }
+                    else
+                    {
+                        if (copyTo == cnt1) break;
+                        nums1[copyTo] = nums1[cnt1];
+                        nums1[cnt1] = int.MinValue;
+                        if(cnt1 > 0) cnt1--;
+                    }
+                }
+            }
+
+            
+
+            Console.WriteLine(nums1);
+        }
     }
 }

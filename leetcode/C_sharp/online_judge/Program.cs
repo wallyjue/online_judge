@@ -17,10 +17,16 @@ namespace online_judge
 				}
 			*/
 			online_judge.leetcode.explore.Array problem = new online_judge.leetcode.explore.Array();
-			
 
-			var ret = problem.DuplicateZeros(new int[] { 0, 0,0,0,0,0,0 });
-			Console.WriteLine(ret);
+
+			//problem.Merge(new int[] { 1, 2, 3, 5, 0, 0, 0 }, 4, new int[] { 2, 5, 6 }, 3);
+
+			//problem.Merge(new int[] { 1 }, 1, new int[] { }, 0);
+
+			//problem.Merge(new int[] { 7,8,10,11,0,0,0,0,0 }, 4, new int[] {1,3,4,5,6 }, 5);
+
+			problem.Merge(new int[] { -1, 0, 0, 3, 3, 4, 0,0, 0 }, 6, new int[] { -1, 3, 4 }, 3);
+			Console.WriteLine("");
 		}
     }
 }
