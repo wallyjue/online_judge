@@ -19,7 +19,7 @@ namespace online_judge
 			online_judge.leetcode.explore.Array problem = new online_judge.leetcode.explore.Array();
 			
 
-			var ret = problem.DuplicateZeros(new int[] { 1, 0, 2, 3, 0, 4, 5, 0 });
+			var ret = problem.DuplicateZeros(new int[] { 0, 0,0,0,0,0,0 });
 			Console.WriteLine(ret);
 		}
     }
