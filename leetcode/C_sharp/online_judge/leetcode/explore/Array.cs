@@ -63,34 +63,34 @@ namespace online_judge.leetcode.explore
 
         public int[] DuplicateZeros(int[] arr) {
             int zeroCnt = 0;
-        int length_ = arr.Length - 1;
-        for (int pointer = 0; pointer <= length_ - zeroCnt; pointer++)
-        {
-            if (arr[pointer] == 0)
+            int length_ = arr.Length - 1;
+            for (int pointer = 0; pointer <= length_ - zeroCnt; pointer++)
             {
+                if (arr[pointer] == 0)
+                {
         
-                if (pointer == length_ - zeroCnt)
-                    {
-                        // For this zero we just copy it without duplication.
-                        arr[length_] = 0;
-                        length_ -= 1;
-                        break;
-                    }
-                zeroCnt++;
+                    if (pointer == length_ - zeroCnt)
+                        {
+                            // For this zero we just copy it without duplication.
+                            arr[length_] = 0;
+                            length_ -= 1;
+                            break;
+                        }
+                    zeroCnt++;
+                }
             }
-        }
-        int last = length_ - zeroCnt;
+            int last = length_ - zeroCnt;
 
-        // Copy zero twice, and non zero once.
-        for (int i = last; i >= 0; i--) {
-            if (arr[i] == 0) {
-                arr[i + zeroCnt] = 0;
-                zeroCnt--;
-                arr[i + zeroCnt] = 0;
-            } else {
-                arr[i + zeroCnt] = arr[i];
+            // Copy zero twice, and non zero once.
+            for (int i = last; i >= 0; i--) {
+                if (arr[i] == 0) {
+                    arr[i + zeroCnt] = 0;
+                    zeroCnt--;
+                    arr[i + zeroCnt] = 0;
+                } else {
+                    arr[i + zeroCnt] = arr[i];
+                }
             }
-        }
 
             return arr;
         }
