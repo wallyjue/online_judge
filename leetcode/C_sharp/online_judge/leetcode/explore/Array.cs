@@ -133,5 +133,48 @@ namespace online_judge.leetcode.explore
 
             Console.WriteLine(nums1);
         }
+
+        public int RemoveElement(int[] nums, int val)
+        {
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+
+            int ret = 0;
+            int leftPointer = -1, rightPointer = nums.Length - 1;
+            for (int cnt = 0; cnt < nums.Length ; cnt++)
+            {
+                if (nums[cnt] == val) 
+                {
+                    if (leftPointer < 0) leftPointer = cnt;
+                }
+                else
+                {
+                    ret++;
+                    rightPointer = cnt;
+                }
+            }
+
+            if (leftPointer < 0)
+            {
+                return nums.Length;
+            }
+
+            while (rightPointer >= leftPointer)
+            {
+                if (nums[leftPointer] == val && nums[rightPointer] != val)
+                {
+                    int temp = nums[leftPointer];
+                    nums[leftPointer] = nums[rightPointer];
+                    nums[rightPointer] = temp;
+                }
+
+                if (nums[leftPointer] != val) leftPointer++;
+                if (nums[rightPointer] == val) rightPointer--;
+            }
+
+            return ret;
+        }
     }
 }

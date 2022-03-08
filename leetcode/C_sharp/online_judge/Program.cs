@@ -25,8 +25,10 @@ namespace online_judge
 
 			//problem.Merge(new int[] { 7,8,10,11,0,0,0,0,0 }, 4, new int[] {1,3,4,5,6 }, 5);
 
-			problem.Merge(new int[] { -1, 0, 0, 3, 3, 4, 0,0, 0 }, 6, new int[] { -1, 3, 4 }, 3);
-			Console.WriteLine("");
+			var ret = problem.RemoveElement(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 }, 2);
+
+			ret = problem.RemoveElement(new int[] {1 }, 2);
+			Console.WriteLine("ret:" + ret);
 		}
     }
 }
