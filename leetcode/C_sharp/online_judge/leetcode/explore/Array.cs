@@ -176,5 +176,24 @@ namespace online_judge.leetcode.explore
 
             return ret;
         }
+
+        public int RemoveDuplicates(int[] nums)
+        {
+            int ret = 0;
+            int currentValue = -101, copyTo = 0;
+
+            for (int cnt = 0; cnt < nums.Length; cnt++)
+            {
+                if (nums[cnt] > currentValue)
+                {
+                    currentValue = nums[cnt];
+                    nums[copyTo] = nums[cnt];
+                    ret++;
+                    copyTo++;
+                }
+            }
+
+            return ret;
+        }
     }
 }
