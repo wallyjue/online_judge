@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace online_judge.leetcode.explore
 {
@@ -194,6 +195,22 @@ namespace online_judge.leetcode.explore
             }
 
             return ret;
+        }
+
+        public bool CheckIfExist(int[] arr)
+        {
+            Hashtable hashtable = new Hashtable();
+            for (int cnt = 0; cnt < arr.Length; cnt++)
+            {
+                if (hashtable.ContainsKey(arr[cnt] * 2) || (hashtable.ContainsKey(arr[cnt] / 2) && arr[cnt] % 2 == 0))
+                {
+                    return true;
+                }
+
+                if (!hashtable.ContainsKey(arr[cnt])) hashtable.Add(arr[cnt], true);
+            }
+
+            return false;
         }
     }
 }

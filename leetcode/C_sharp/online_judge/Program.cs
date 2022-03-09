@@ -25,9 +25,8 @@ namespace online_judge
 
 			//problem.Merge(new int[] { 7,8,10,11,0,0,0,0,0 }, 4, new int[] {1,3,4,5,6 }, 5);
 
-			var ret = problem.RemoveDuplicates(new int[] { 0, 1, 2, 2, 3, 0, 4, 2 });
+			var ret = problem.CheckIfExist(new int[] { 4, -7, 11, 4, 18 });
 
-			ret = problem.RemoveDuplicates(new int[] {});
 			Console.WriteLine("ret:" + ret);
 		}
     }
