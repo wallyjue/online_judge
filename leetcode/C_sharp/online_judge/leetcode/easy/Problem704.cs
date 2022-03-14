@@ -19,48 +19,23 @@ namespace online_judge.leetcode.easy
 
                 return -1;
             }
-
-
-            int index = nums.Length / 2;
-            for (var cnt = 0; cnt < nums.Length; cnt++)
+            int round = 1, pow = 2;
+            for (int index = nums.Length / 2; index >= 0 && index < nums.Length && pow > 0;)
             {
-                if( target == nums[index])
+                if (nums[index] == target)
                 {
                     return index;
                 }
-
-                int diff = index / 2;
-                
-                if (diff < 1)
+                round++;
+                pow *= 2;
+                if (nums[index] > target)
                 {
-                    diff = 1;
-                }
-
-                if (target > nums[index])
-                {
-                    index += diff;
-                    if (target == nums[index])
-                    {
-                        return index;
-                    }
-                    else if (index > nums.Length)
-                    {
-                        return -1;
-                    }
+                    index -= pow > nums.Length ? 1 : nums.Length / pow;
                 }
                 else
                 {
-                    index -= diff;
-                    if (target == nums[index])
-                    {
-                        return index;
-                    }
-                    else if (index < 0)
-                    {
-                        return -1;
-                    }
+                    index += pow > nums.Length ? 1 : nums.Length / pow;
                 }
-
             }
             return -1;
 

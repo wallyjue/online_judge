@@ -16,17 +16,36 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			online_judge.leetcode.explore.Array problem = new online_judge.leetcode.explore.Array();
+			var problem = new online_judge.leetcode.easy.Problem704();
+			int ret = -1;
+			//ret = problem.Search(new int[] { -1, 0, 3, 5, 9, 12 }, 9);
+			//Console.WriteLine("ret:" + ret);
 
+			//ret = problem.Search(new int[] { -1, 0, 3, 5, 9, 12 }, 2);
+			//Console.WriteLine("ret:" + ret);
 
-			//problem.Merge(new int[] { 1, 2, 3, 5, 0, 0, 0 }, 4, new int[] { 2, 5, 6 }, 3);
+			ret = problem.Search(new int[] { -2, -1, 0, 5 }, -2);
+			Console.WriteLine("ret:" + ret);
 
-			//problem.Merge(new int[] { 1 }, 1, new int[] { }, 0);
+			ret = problem.Search(new int[] { -2,-1, 0, 5 }, 5);
+			Console.WriteLine("ret:" + ret);
 
-			//problem.Merge(new int[] { 7,8,10,11,0,0,0,0,0 }, 4, new int[] {1,3,4,5,6 }, 5);
+			ret = problem.Search(new int[] { -2, -1, 0, 5 }, 1);
+			Console.WriteLine("ret:" + ret);
 
-			var ret = problem.CheckIfExist(new int[] { 4, -7, 11, 4, 18 });
+			ret = problem.Search(new int[] { -2, -1, 0, 5 }, -3);
+			Console.WriteLine("ret:" + ret);
 
+			ret = problem.Search(new int[] { -1, 0, 5 }, 5);
+			Console.WriteLine("ret:" + ret);
+
+			ret = problem.Search(new int[] { -1, 0, 5 }, -1);
+			Console.WriteLine("ret:" + ret);
+
+			ret = problem.Search(new int[] { -1, 0, 5 }, 2);
+			Console.WriteLine("ret:" + ret);
+
+			ret = problem.Search(new int[] { 0 }, 0);
 			Console.WriteLine("ret:" + ret);
 		}
     }
