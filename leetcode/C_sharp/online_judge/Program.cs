@@ -16,36 +16,9 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var problem = new online_judge.leetcode.easy.Problem704();
+			var problem = new online_judge.leetcode.medium.Problem287();
 			int ret = -1;
-			//ret = problem.Search(new int[] { -1, 0, 3, 5, 9, 12 }, 9);
-			//Console.WriteLine("ret:" + ret);
-
-			//ret = problem.Search(new int[] { -1, 0, 3, 5, 9, 12 }, 2);
-			//Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -2, -1, 0, 5 }, -2);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -2,-1, 0, 5 }, 5);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -2, -1, 0, 5 }, 1);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -2, -1, 0, 5 }, -3);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -1, 0, 5 }, 5);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -1, 0, 5 }, -1);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { -1, 0, 5 }, 2);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.Search(new int[] { 0 }, 0);
+			ret = problem.FindDuplicate(new int[] { 1, 3, 4, 2, 2 });
 			Console.WriteLine("ret:" + ret);
 		}
     }
