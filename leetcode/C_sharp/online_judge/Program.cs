@@ -16,48 +16,34 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var problem = new online_judge.leetcode.easy.Problem35();
+			var easy = new online_judge.leetcode.easy.Problem35();
+
+			var medium = new online_judge.leetcode.medium.Problem189();
 			int ret = -1;
 
-			ret = problem.SearchInsert(new int[] { 1, 3}, 3); // 1
-			Console.WriteLine("ret:" + ret);
+			
 
-			ret = problem.SearchInsert(new int[] { 1, 3}, 1); // 0
-			Console.WriteLine("ret:" + ret);
+			
+			medium.Rotate(new int[] { 1, 3, 5, 6 }, 0); // 1, 3, 5, 6
 
-			ret = problem.SearchInsert(new int[] { 3 }, 3); // 0
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { -1, -100, 3, 99 }, 2); // 3, 99, -1, -100
 
-			ret = problem.SearchInsert(new int[] { 1 }, 3); // 1
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { -1, -100, 3, 99, 2, 5, 8, 6 }, 2); // 8, 6, -1, -100, 3, 99, 2, 5
 
+			medium.Rotate(new int[] { -1, -100, 3, 99, 2, 5, 8, 6 }, 4); // 2, 5, 8, 6, -1, -100, 3, 99
 
-			ret = problem.SearchInsert(new int[] { -1, 0, 2, 3, 4, 7, 9 }, 8); // 6
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3); // 5,6,7,1,2,3,4
+																 // 5, 6, 7, 4, 1, 2, 3, 
 
-			ret = problem.SearchInsert(new int[] { -1, 0, 2, 3, 4, 7, 9 }, 10); // 7
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 1); // 7,1,2,3,4,5,6
+																 //7, 2, 3, 4, 5, 6, 1
 
-			ret = problem.SearchInsert(new int[] { -1, 0, 2, 3, 4, 7, 9 }, 1); // 2
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 5); // 3,4,5,6,7,1,2
+																 //7, 6, 1, 2, 3, 4, 5
 
-			ret = problem.SearchInsert(new int[] { -1, 0, 2, 3, 4, 7, 9 }, -3); // 0
-			Console.WriteLine("ret:" + ret);
+			medium.Rotate(new int[] { 6, 7, 1, 2, 3, 4, 5 }, 5); // 1,2,3,4,5,6,7
+																 // 5, 4, 6, 7, 1, 2, 3
 
-			ret = problem.SearchInsert(new int[] { -1, 0, 2, 3, 4, 7, 9 }, 3); // 3
-			Console.WriteLine("ret:" + ret);
-
-
-			ret = problem.SearchInsert(new int[] { 1, 3, 5, 6 }, 5);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.SearchInsert(new int[] { 1, 3, 5, 6 }, 2);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.SearchInsert(new int[] { 1, 3, 5, 6 }, 7);
-			Console.WriteLine("ret:" + ret);
-
-			ret = problem.SearchInsert(new int[] { 1, 3, 5, 6 }, 0);
 			Console.WriteLine("ret:" + ret);
 		}
     }
