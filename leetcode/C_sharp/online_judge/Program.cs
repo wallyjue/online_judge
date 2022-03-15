@@ -26,6 +26,8 @@ namespace online_judge
 			
 			medium.Rotate(new int[] { 1, 3, 5, 6 }, 0); // 1, 3, 5, 6
 
+			medium.Rotate(new int[] { 1, 2 }, 3); // 2, 1
+
 			medium.Rotate(new int[] { -1, -100, 3, 99 }, 2); // 3, 99, -1, -100
 
 			medium.Rotate(new int[] { -1, -100, 3, 99, 2, 5, 8, 6 }, 2); // 8, 6, -1, -100, 3, 99, 2, 5

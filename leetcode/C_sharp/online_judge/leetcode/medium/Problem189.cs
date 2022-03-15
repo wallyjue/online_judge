@@ -11,7 +11,7 @@ namespace online_judge.leetcode.medium
     {
         public void Rotate(int[] nums, int k)
         {
-            /*
+            k = k % nums.Length;
             int right = nums.Length - 1, left = k - 1;
 
             while(left >= 0)
@@ -22,8 +22,37 @@ namespace online_judge.leetcode.medium
                 left--;
                 right--;
             }
-            */
             
+            /*
+            k = k % nums.Length;
+            if (nums.Length / 2 > k)
+            {
+                while (k > 0)
+                {
+                    int temp = nums[nums.Length - 1];
+                    for (int cnt = nums.Length - 1; cnt > 0; cnt--)
+                    {
+                        nums[cnt] = nums[cnt - 1];
+                    }
+                    nums[0] = temp;
+                    k--;
+                }
+            }
+            else
+            {
+                k = nums.Length - k;
+                while (k > 0)
+                {
+                    int temp = nums[0];
+                    for (int cnt = 0; cnt < nums.Length - 1; cnt++)
+                    {
+                        nums[cnt] = nums[cnt + 1];
+                    }
+                    nums[nums.Length - 1] = temp;
+                    k--;
+                }
+            }
+            */
             // rotate to right
             /*
             while(k > 0)
@@ -39,6 +68,7 @@ namespace online_judge.leetcode.medium
             */
 
             // rotate to left
+            /*
             while (k > 0)
             {
                 int temp = nums[0];
@@ -49,7 +79,7 @@ namespace online_judge.leetcode.medium
                 nums[nums.Length - 1] = temp;
                 k--;
             }
-
+            */
             Console.WriteLine("nums:" + Helper.IteratingString(nums));
         }
     }
