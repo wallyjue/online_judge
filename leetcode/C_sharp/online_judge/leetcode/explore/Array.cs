@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using online_judge.utility;
 
 namespace online_judge.leetcode.explore
 {
@@ -211,6 +212,72 @@ namespace online_judge.leetcode.explore
             }
 
             return false;
+        }
+
+        public bool ValidMountainArray(int[] arr)
+        {
+            int cnt = 0, max = arr[0], maxIndex = 0;
+
+            while(cnt< arr.Length)
+            {
+                if(max < arr[cnt])
+                {
+                    max = arr[cnt];
+                    maxIndex = cnt;
+                }
+                cnt++;
+            }
+
+            if (maxIndex == 0 || maxIndex == arr.Length-1) return false;
+
+            for(cnt = 0; cnt < maxIndex; cnt++)
+            {
+                if (arr[cnt + 1] <= arr[cnt]) return false;
+            }
+
+            for (cnt = arr.Length -1; cnt > maxIndex; cnt--)
+            {
+                if (arr[cnt - 1] <= arr[cnt]) return false;
+            }
+
+            return true;
+        }
+
+        public int[] ReplaceElements(int[] arr)
+        {
+            int[] nextmax = new int[] { -1, -1 };
+            for (int cnt = 0; cnt < arr.Length;cnt++)
+            {
+                if (nextmax[1] > arr[cnt])
+                {
+                    arr[cnt] = nextmax[0];
+                }
+                else
+                {
+                    nextmax = FindNextMax(arr, cnt+1);
+                    arr[cnt] = nextmax[0];
+                }
+            }
+            arr[arr.Length-1] = -1;
+
+            Console.WriteLine(Helper.IteratingString(arr));
+            return arr;
+        }
+
+        private int[] FindNextMax(int[] arr, int start = 0)
+        {
+            int max = 0, index = start, maxIndex = 0;
+            while(index < arr.Length)
+            {
+                if(arr[index] >= max)
+                {
+                    max = arr[index];
+                    maxIndex = index;
+                }
+                index++;
+            }
+
+            return new int[] { max, maxIndex };
         }
     }
 }
