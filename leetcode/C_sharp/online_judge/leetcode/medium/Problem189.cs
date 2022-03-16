@@ -11,6 +11,16 @@ namespace online_judge.leetcode.medium
     {
         public void Rotate(int[] nums, int k)
         {
+            int[] a = new int[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                a[(i + k) % nums.Length] = nums[i];
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = a[i];
+            }
+            /*
             k = k % nums.Length;
             int right = nums.Length - 1, left = k - 1;
 
@@ -22,7 +32,7 @@ namespace online_judge.leetcode.medium
                 left--;
                 right--;
             }
-            
+            */
             /*
             k = k % nums.Length;
             if (nums.Length / 2 > k)
