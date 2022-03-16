@@ -16,34 +16,25 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem70();
+			var easy = new online_judge.leetcode.easy.Problem283();
 
 			var medium = new online_judge.leetcode.medium.Problem189();
 			int ret = -1;
 
-			ret = easy.ClimbStairs(1);
-			Console.WriteLine("ret:" + ret);
 
-			ret = easy.ClimbStairs(2);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 1, 0, 2, 0, 3 });
 
-			ret = easy.ClimbStairs(3);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 1, 0, 2, 0, 3, 0 });
 
-			ret = easy.ClimbStairs(4);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 0 });
 
-			ret = easy.ClimbStairs(5);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 0 });
 
-			ret = easy.ClimbStairs(6);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 0, 3 });
 
-			ret = easy.ClimbStairs(7);
-			Console.WriteLine("ret:" + ret);
+			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 4 });
 
-			ret = easy.ClimbStairs(8);
-			Console.WriteLine("ret:" + ret);
+
 
 			Console.WriteLine("ret:" + ret);
 		}
