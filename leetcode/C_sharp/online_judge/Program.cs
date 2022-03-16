@@ -18,23 +18,18 @@ namespace online_judge
 			*/
 			var easy = new online_judge.leetcode.easy.Problem283();
 
-			var medium = new online_judge.leetcode.medium.Problem189();
-			int ret = -1;
+			var medium = new online_judge.leetcode.medium.Problem167();
+			int[] ret;
 
+			
 
-			easy.MoveZeroes(new int[] { 1, 0, 2, 0, 3 });
+			ret = medium.TwoSum(new int[] { 2, 7, 11, 15 }, 9);
 
-			easy.MoveZeroes(new int[] { 1, 0, 2, 0, 3, 0 });
+			ret = medium.TwoSum(new int[] { 2, 3, 4 }, 6);
 
-			easy.MoveZeroes(new int[] { 0 });
+			ret = medium.TwoSum(new int[] { -1, 0 }, -1);
 
-			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 0 });
-
-			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 0, 3 });
-
-			easy.MoveZeroes(new int[] { 0, 1, 0, 2, 4 });
-
-
+			ret = medium.TwoSum(new int[] { 0, 3, 6 }, 6);
 
 			Console.WriteLine("ret:" + ret);
 		}
