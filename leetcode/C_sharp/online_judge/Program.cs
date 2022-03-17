@@ -16,21 +16,21 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem283();
+			var easy = new online_judge.leetcode.easy.Problem344();
 			var medium = new online_judge.leetcode.medium.Problem167();
 			var explore = new online_judge.leetcode.explore.Array();
-			int[] ret;
+			int ret = -1;
 
 			//ret = explore.ReplaceElements(new int[] { 2, 1});
 			//Console.WriteLine("ret:" + ret);
 
-			ret = explore.ReplaceElements(new int[] { 17, 18, 5, 4, 6, 1 });
+			easy.ReverseString(new char[] { 'h', 'e', 'l', 'l', 'o' });
 			Console.WriteLine("ret:" + ret);
 
-			ret = explore.ReplaceElements(new int[] { 400 });
+			easy.ReverseString(new char[] { 'H', 'a', 'n', 'n', 'a', 'h' });
 			Console.WriteLine("ret:" + ret);
 
-			ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
+			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			Console.WriteLine("ret:" + ret);
 		}
     }
