@@ -16,7 +16,7 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem344();
+			var easy = new online_judge.leetcode.easy.Problem557();
 			var medium = new online_judge.leetcode.medium.Problem167();
 			var explore = new online_judge.leetcode.explore.Array();
 			int ret = -1;
@@ -24,10 +24,10 @@ namespace online_judge
 			//ret = explore.ReplaceElements(new int[] { 2, 1});
 			//Console.WriteLine("ret:" + ret);
 
-			easy.ReverseString(new char[] { 'h', 'e', 'l', 'l', 'o' });
+			easy.ReverseWords("Let's take LeetCode contest");
 			Console.WriteLine("ret:" + ret);
 
-			easy.ReverseString(new char[] { 'H', 'a', 'n', 'n', 'a', 'h' });
+			easy.ReverseWords("God Ding");
 			Console.WriteLine("ret:" + ret);
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
