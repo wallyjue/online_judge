@@ -4,7 +4,7 @@ using System.Text;
 
 namespace online_judge.leetcode.medium
 {
-    class Problem_19
+    internal class Problem_19
     {
 		public ListNode RemoveNthFromEnd(ListNode head, int n)
 		{
@@ -15,7 +15,7 @@ namespace online_judge.leetcode.medium
 		}
 	}
 
-	class ListNode
+	internal class ListNode
 	{
 		public int val;
 		public ListNode next;
