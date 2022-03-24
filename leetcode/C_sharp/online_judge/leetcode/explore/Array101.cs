@@ -181,21 +181,17 @@ namespace online_judge.leetcode.explore
 
         public int RemoveDuplicates(int[] nums)
         {
-            int ret = 0;
-            int currentValue = -101, copyTo = 0;
-
-            for (int cnt = 0; cnt < nums.Length; cnt++)
+            if (nums.Length == 0) return 0;
+            int i = 0;
+            for (int j = 1; j < nums.Length; j++)
             {
-                if (nums[cnt] > currentValue)
+                if (nums[j] != nums[i])
                 {
-                    currentValue = nums[cnt];
-                    nums[copyTo] = nums[cnt];
-                    ret++;
-                    copyTo++;
+                    i++;
+                    nums[i] = nums[j];
                 }
             }
-
-            return ret;
+            return i + 1;
         }
 
         public bool CheckIfExist(int[] arr)

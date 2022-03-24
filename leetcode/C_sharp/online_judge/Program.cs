@@ -21,16 +21,19 @@ namespace online_judge
 			var explore = new online_judge.leetcode.explore.Array101();
 			int ret = -1;
 
-			ret = medium.LengthOfLongestSubstring("abc");
+			ret = explore.RemoveDuplicates(new int[] { -100,1, 2 });
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.LengthOfLongestSubstring("abcabcbb");
+			ret = explore.RemoveDuplicates(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4});
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.LengthOfLongestSubstring("bbbbb");
+			ret = explore.RemoveDuplicates(new int[] { 1, 1, 2 });
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.LengthOfLongestSubstring("pwwkew");
+			ret = explore.RemoveDuplicates(new int[] { -100 });
+			Console.WriteLine("ret:" + ret);
+
+			ret = explore.RemoveDuplicates(new int[] { -100, 0, 1, 1, 1, 2, 2, 3, 3, 4, 5, 100 });
 			Console.WriteLine("ret:" + ret);
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
