@@ -12,7 +12,7 @@ namespace online_judge.leetcode.easy
         public void MoveZeroes(int[] nums)
         {
             int ptr = 0, nonzeroPtr = 0;
-            while(nonzeroPtr < nums.Length && ptr < nums.Length)
+            while (nonzeroPtr < nums.Length && ptr < nums.Length)
             {
                 if (nums[nonzeroPtr] == 0 || ptr > nonzeroPtr)
                 {
@@ -29,7 +29,7 @@ namespace online_judge.leetcode.easy
                 int temp = nums[ptr];
                 nums[ptr] = nums[nonzeroPtr];
                 nums[nonzeroPtr] = temp;
-                
+
                 ptr++;
             }
 
