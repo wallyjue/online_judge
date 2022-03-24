@@ -8,7 +8,7 @@ using online_judge.utility;
 
 namespace online_judge.leetcode.explore
 {
-    class Array
+    class Array101
     {
         public int FindNumbers(int[] nums)
         {
