@@ -30,10 +30,17 @@ namespace online_judge
 			ret = medium.CheckInclusion("ab", "eidboaoo");
 			Console.WriteLine("ret:" + ret);
 
-			
+			ret = medium.CheckInclusion("adc", "dcda");
+			Console.WriteLine("ret:" + ret);
+
+			ret = medium.CheckInclusion("ccc", "cbac");
+			Console.WriteLine("ret:" + ret);
+
+			ret = medium.CheckInclusion("abc", "dbbabcbaba");
+			Console.WriteLine("ret:" + ret);
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
-			Console.WriteLine("ret:" + ret);
+			//Console.WriteLine("ret:" + ret);
 		}
     }
 }
