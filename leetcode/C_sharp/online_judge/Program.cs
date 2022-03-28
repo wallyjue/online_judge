@@ -1,4 +1,5 @@
-﻿using online_judge.leetcode.easy;
+﻿using online_judge.leetcode;
+using online_judge.leetcode.easy;
 using online_judge.leetcode.medium;
 using System;
 
@@ -17,27 +18,21 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem448();
-			var medium = new online_judge.leetcode.medium.Problem567();
+			var medium = new online_judge.leetcode.medium.Problem24();
 			var explore = new online_judge.leetcode.explore.Array101();
-			bool ret = false;
+			
+			//ListNode node5 = new ListNode(6, null);
+			/*
+			ListNode node4 = new ListNode(5, null);
+			ListNode node3 = new ListNode(4, node4);
+			ListNode node2 = new ListNode(3, node3);
+			ListNode node1 = new ListNode(2, node2);
+			*/
+			ListNode head = new ListNode(1, null);
 
-			//ret = medium.FindMaxConsecutiveOnes(new int[] { 1, 0, 1, 1, 0 });
-			//Console.WriteLine("ret:" + ret);
-
-			ret = medium.CheckInclusion("ab", "eidbaooo");
+			var ret = medium.SwapPairs(head);
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.CheckInclusion("ab", "eidboaoo");
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.CheckInclusion("adc", "dcda");
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.CheckInclusion("ccc", "cbac");
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.CheckInclusion("abc", "dbbabcbaba");
-			Console.WriteLine("ret:" + ret);
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
