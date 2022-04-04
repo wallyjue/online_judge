@@ -17,10 +17,10 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem125();
+			var easy = new online_judge.leetcode.easy.Problem509();
 			var medium = new online_judge.leetcode.medium.Problem1721();
 			var explore = new online_judge.leetcode.explore.Array101();
-
+			/*
 			ListNode node9 = new ListNode(10, null);
 			ListNode node8 = new ListNode(9, node9);
 			ListNode node7 = new ListNode(8, node8);
@@ -33,12 +33,11 @@ namespace online_judge
 			ListNode node1 = new ListNode(2, node2);
 			
 			ListNode head = new ListNode(1, node1);
-
-			var ret = medium.SwapNodes(head, 6);
+			*/
+			var ret = easy.Fib(6);
 			Console.WriteLine("ret:" + ret);
 
-			ListNode newnode = new ListNode(0, null);
-			ret = medium.SwapNodes(newnode, 1);
+		
 			Console.WriteLine("ret:" + ret);
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
