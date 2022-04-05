@@ -12,11 +12,11 @@ namespace online_judge.leetcode.easy
         {
             if (root != null)
             {
-                Math.Max(MaxDepth(root.left), MaxDepth(root.right));
+                return 1 + Math.Max(MaxDepth(root.left), MaxDepth(root.right));
             }
             else
             {
-                return 1;
+                return 0;
             }
         }
     }
