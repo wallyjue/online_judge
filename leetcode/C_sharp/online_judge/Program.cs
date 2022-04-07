@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem509();
-			var medium = new online_judge.leetcode.medium.Problem11();
+			var medium = new online_judge.leetcode.medium.Problem50();
 			var explore = new online_judge.leetcode.explore.Array101();
 			/*
 			ListNode node9 = new ListNode(10, null);
@@ -34,15 +34,18 @@ namespace online_judge
 			
 			ListNode head = new ListNode(1, node1);
 			*/
-			var ret = medium.MaxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 });
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.MaxArea(new int[] { 1, 1, 1, 1, 1, 100, 100, 1, 1, 1,1,1,1,1 });
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.MaxArea(new int[] { 1, 1 });
-			Console.WriteLine("ret:" + ret);
 			
+			
+
+			var ret = medium.MyPow(2.0, 10);
+			Console.WriteLine("ret:" + ret);
+
+			ret = medium.MyPow(2.1, 3);
+			Console.WriteLine("ret:" + ret);
+
+			ret = medium.MyPow(2.0, -2);
+			Console.WriteLine("ret:" + ret);
+
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
 		}
