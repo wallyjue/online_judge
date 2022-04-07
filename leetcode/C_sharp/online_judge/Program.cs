@@ -17,34 +17,30 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem509();
+			var easy = new online_judge.leetcode.easy.Problem21();
 			var medium = new online_judge.leetcode.medium.Problem50();
 			var explore = new online_judge.leetcode.explore.Array101();
-			/*
+			
 			ListNode node9 = new ListNode(10, null);
 			ListNode node8 = new ListNode(9, node9);
 			ListNode node7 = new ListNode(8, node8);
 			ListNode node6 = new ListNode(7, node7);
 			ListNode node5 = new ListNode(6, node6);
 			
-			ListNode node4 = new ListNode(5, node5);
+			ListNode node4 = new ListNode(5, null);
 			ListNode node3 = new ListNode(4, node4);
 			ListNode node2 = new ListNode(3, node3);
 			ListNode node1 = new ListNode(2, node2);
 			
 			ListNode head = new ListNode(1, node1);
-			*/
 			
 			
+			
 
-			var ret = medium.MyPow(2.0, 10);
+			var ret = easy.MergeTwoLists(head, node5);
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.MyPow(2.1, 3);
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.MyPow(2.0, -2);
-			Console.WriteLine("ret:" + ret);
+			
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
