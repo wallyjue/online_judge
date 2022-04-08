@@ -19,45 +19,35 @@ namespace online_judge
 			*/
 			var easy = new online_judge.leetcode.easy.Problem21();
 			var medium = new online_judge.leetcode.medium.Problem779();
+			var hard = new online_judge.leetcode.hard.Problem23();
 			var explore = new online_judge.leetcode.explore.Array101();
-			/*
+
+			// [[1,4,5],[1,3,4],[2,6]]
+			
 			ListNode node9 = new ListNode(10, null);
 			ListNode node8 = new ListNode(9, node9);
-			ListNode node7 = new ListNode(8, node8);
-			ListNode node6 = new ListNode(7, node7);
-			ListNode node5 = new ListNode(6, node6);
-			
-			ListNode node4 = new ListNode(5, null);
-			ListNode node3 = new ListNode(4, node4);
-			ListNode node2 = new ListNode(3, node3);
-			ListNode node1 = new ListNode(2, node2);
-			
+
+			ListNode node7 = new ListNode(6, null);
+			ListNode node6 = new ListNode(2, node7);
+
+			ListNode node5 = new ListNode(4, null);
+			ListNode node4 = new ListNode(3, node5);
+			ListNode node3 = new ListNode(1, node4);
+
+			ListNode node2 = new ListNode(5, null);
+			ListNode node1 = new ListNode(4, node2);
 			ListNode head = new ListNode(1, node1);
-			*/
-			
-			
-			/*
-			var ret = medium.KthGrammar(1, 1);
-			Console.WriteLine("ret:" + ret);
-			ret = medium.KthGrammar(2, 1);
+
+
+			var input = new ListNode[] { head , node3 ,node6};
+
+			var ret = hard.MergeKLists(input);
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.KthGrammar(3, 1);
+			ret = hard.MergeKLists(new ListNode[] { });
 			Console.WriteLine("ret:" + ret);
 
-			ret = medium.KthGrammar(4, 1);
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.KthGrammar(5, 1);
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.KthGrammar(6, 1);
-			Console.WriteLine("ret:" + ret);
-
-			ret = medium.KthGrammar(7, 1);
-			Console.WriteLine("ret:" + ret);
-			*/
-			var ret = medium.KthGrammar(20, 200);
+			ret = hard.MergeKLists(new ListNode[] { null });
 			Console.WriteLine("ret:" + ret);
 			//ret = medium.KthGrammar(30, 10000);
 			//Console.WriteLine("ret:" + ret);
