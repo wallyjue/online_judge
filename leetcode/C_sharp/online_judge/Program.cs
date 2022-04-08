@@ -36,17 +36,33 @@ namespace online_judge
 			*/
 			
 			
-
+			/*
 			var ret = medium.KthGrammar(1, 1);
 			Console.WriteLine("ret:" + ret);
 			ret = medium.KthGrammar(2, 1);
 			Console.WriteLine("ret:" + ret);
-			ret = medium.KthGrammar(2, 2);
+
+			ret = medium.KthGrammar(3, 1);
 			Console.WriteLine("ret:" + ret);
-			ret = medium.KthGrammar(3, 2);
+
+			ret = medium.KthGrammar(4, 1);
 			Console.WriteLine("ret:" + ret);
-			ret = medium.KthGrammar(4, 3);
+
+			ret = medium.KthGrammar(5, 1);
 			Console.WriteLine("ret:" + ret);
+
+			ret = medium.KthGrammar(6, 1);
+			Console.WriteLine("ret:" + ret);
+
+			ret = medium.KthGrammar(7, 1);
+			Console.WriteLine("ret:" + ret);
+			*/
+			var ret = medium.KthGrammar(20, 200);
+			Console.WriteLine("ret:" + ret);
+			//ret = medium.KthGrammar(30, 10000);
+			//Console.WriteLine("ret:" + ret);
+			//ret = medium.KthGrammar(4, 3);
+			//Console.WriteLine("ret:" + ret);
 
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});

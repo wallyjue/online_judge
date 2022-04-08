@@ -10,25 +10,20 @@ namespace online_judge.leetcode.medium
     {
         public int KthGrammar(int n, int k)
         {
-            string one = "0";
-            string curr = one, next = one;
-            for (int i = 1; i < n; i++)
+            if (n == 1 && k == 1)
+                return 0;
+
+            int mid = (int)Math.Pow(2, n - 1) / 2;
+
+            if (k <= mid)
             {
-                for (int j = 0; j < curr.Length; j++)
-                {
-                    if (curr[j] == 0)
-                    {
-                        next = $"{next}01"; 
-                    }
-                    else
-                    {
-                        next = $"{next}10";
-                    }
-                }
-                curr = next;
+                return KthGrammar(n - 1, k);
+
             }
-            Console.WriteLine(curr);
-            return curr[k-1] == '0' ? 0 : 1;
+            else
+            {
+                return KthGrammar(n - 1, (k - mid)) == 0 ? 1 : 0;
+            }
         }
     }
 }
