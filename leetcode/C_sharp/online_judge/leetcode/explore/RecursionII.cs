@@ -13,7 +13,24 @@ namespace online_judge.leetcode.explore
             return merge_sort(nums);
         }
 
-        public int[] merge_sort(int[] nums)
+        public bool IsValidBST(TreeNode root)
+        {
+            if (root == null) return true;
+
+
+            return Validate(root, int.MinValue, int.MaxValue);
+        }
+
+        private bool Validate(TreeNode node, int lower, int higher)
+        {
+            if (node == null) return true;
+
+            if (node.val <= lower || node.val >= higher) return false;
+
+            return Validate(node.left, lower, node.val) && Validate(node.right, node.val, higher);
+        }
+
+        private int[] merge_sort(int[] nums)
         {
             if (nums.Length == 1)
             {
@@ -30,7 +47,7 @@ namespace online_judge.leetcode.explore
             return merge(left_ret, right_ret);
         }
 
-        public int[] merge(int[] left, int[] right)
+        private int[] merge(int[] left, int[] right)
         {
             int[] ret = new int[left.Length+ right.Length];
             int left_ptr = 0, right_ptr = 0, ret_ptr = 0;
