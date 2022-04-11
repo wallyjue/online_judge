@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem21();
-			var medium = new online_judge.leetcode.medium.Problem779();
+			var medium = new online_judge.leetcode.medium.Problem96();
 			var hard = new online_judge.leetcode.hard.Problem23();
 			var explore = new online_judge.leetcode.explore.Array101();
 
@@ -39,21 +39,13 @@ namespace online_judge
 			ListNode head = new ListNode(1, node1);
 
 
-			var input = new ListNode[] { head , node3 ,node6};
-
-			var ret = hard.MergeKLists(input);
+			
+			var ret = medium.NumTrees(3);
 			Console.WriteLine("ret:" + ret);
-
-			ret = hard.MergeKLists(new ListNode[] { });
+			ret = medium.NumTrees(1);
 			Console.WriteLine("ret:" + ret);
-
-			ret = hard.MergeKLists(new ListNode[] { null });
+			ret = medium.NumTrees(5);
 			Console.WriteLine("ret:" + ret);
-			//ret = medium.KthGrammar(30, 10000);
-			//Console.WriteLine("ret:" + ret);
-			//ret = medium.KthGrammar(4, 3);
-			//Console.WriteLine("ret:" + ret);
-
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
