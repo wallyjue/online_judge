@@ -18,10 +18,10 @@ namespace online_judge.leetcode.explore
             if (root == null) return true;
 
 
-            return Validate(root, int.MinValue, int.MaxValue);
+            return Validate(root, null, null);
         }
 
-        private bool Validate(TreeNode node, int lower, int higher)
+        private bool Validate(TreeNode node, int? lower, int? higher)
         {
             if (node == null) return true;
 
