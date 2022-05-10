@@ -19,7 +19,7 @@ namespace online_judge
 			*/
 			var easy = new online_judge.leetcode.easy.Problem21();
 			var medium = new online_judge.leetcode.medium.Problem96();
-			var hard = new online_judge.leetcode.hard.Problem23();
+			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
 			// [[1,4,5],[1,3,4],[2,6]]
@@ -40,9 +40,10 @@ namespace online_judge
 
 
 			
-			var ret = explore.SortArray(new int[] { 5, 1, 1, 2, 0, 0 });
+			//var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
+			//Console.WriteLine("ret:" + ret);
+			var ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
 			Console.WriteLine("ret:" + ret);
-			
 
 			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
 			//Console.WriteLine("ret:" + ret);
