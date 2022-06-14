@@ -17,8 +17,8 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem1047();
-			var medium = new online_judge.leetcode.medium.Problem96();
+			var easy = new online_judge.leetcode.easy.Problem88();
+			var medium = new online_judge.leetcode.medium.Problem56();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -39,20 +39,22 @@ namespace online_judge
 			ListNode head = new ListNode(1, node1);
 			*/
 
-			var ret = easy.RemoveDuplicates("abbaca");
-			Console.WriteLine("ret:" + ret);
+			medium.Merge(new int[][] { new int[] { 3, 5 }, new int[] { 0, 0 } });
 
-			ret = easy.RemoveDuplicates("azxxzy");
-			Console.WriteLine("ret:" + ret);
+			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 1, 5 }, new int[] { 2, 3 } });
+			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 0, 4 } });
 
-			ret = easy.RemoveDuplicates("aabbcc");
-			Console.WriteLine("ret:" + ret);
+			int[][] input = { new int[] { 1, 3 }, new int[] { 2, 6 }, new int[] { 8, 10 }, new int[] { 15, 18 } };
 
-			ret = easy.RemoveDuplicates("");
-			Console.WriteLine("ret:" + ret);
+			medium.Merge(input);
+			Console.WriteLine("ret:");
+			//int[][] input2 = { new int[] { 1, 4 }, new int[] { 4, 5 }, new int[] { 8, 10 }, new int[] { 15, 18 } };
 
-			ret = easy.RemoveDuplicates("aaa");
-			Console.WriteLine("ret:" + ret);
+
+			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 4, 5 }, new int[] { 5, 10 }, new int[] { 9, 18 } });
+			Console.WriteLine("ret:");
+
+			
 			//var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
 			//Console.WriteLine("ret:" + ret);
 			//var ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
