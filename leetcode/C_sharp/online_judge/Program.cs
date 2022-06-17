@@ -17,7 +17,7 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem88();
+			var easy = new online_judge.leetcode.easy.Problem_1();
 			var medium = new online_judge.leetcode.medium.Problem56();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
@@ -38,30 +38,16 @@ namespace online_judge
 			ListNode node1 = new ListNode(4, node2);
 			ListNode head = new ListNode(1, node1);
 			*/
+			var reteasy = easy.TwoSum2(new int[] { 2, 7, 11, 15 }, 9);
+			reteasy = easy.TwoSum2(new int[] { 3, 2, 4 }, 6);
+			reteasy = easy.TwoSum2(new int[] { 3, 3 }, 6);
+			/*
+			var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
+			Console.WriteLine("ret:" + ret);
+			ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
+			Console.WriteLine("ret:" + ret);
+			*/
 
-			medium.Merge(new int[][] { new int[] { 3, 5 }, new int[] { 0, 0 } });
-
-			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 1, 5 }, new int[] { 2, 3 } });
-			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 0, 4 } });
-
-			int[][] input = { new int[] { 1, 3 }, new int[] { 2, 6 }, new int[] { 8, 10 }, new int[] { 15, 18 } };
-
-			medium.Merge(input);
-			Console.WriteLine("ret:");
-			//int[][] input2 = { new int[] { 1, 4 }, new int[] { 4, 5 }, new int[] { 8, 10 }, new int[] { 15, 18 } };
-
-
-			medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 4, 5 }, new int[] { 5, 10 }, new int[] { 9, 18 } });
-			Console.WriteLine("ret:");
-
-			
-			//var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
-			//Console.WriteLine("ret:" + ret);
-			//var ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
-			//Console.WriteLine("ret:" + ret);
-
-			//ret = explore.ReplaceElements(new int[] { 3, 2,1,9,5,2,7,1,3, 4});
-			//Console.WriteLine("ret:" + ret);
 		}
     }
 }

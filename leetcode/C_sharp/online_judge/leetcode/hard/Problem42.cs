@@ -62,5 +62,20 @@ namespace online_judge.leetcode.hard
             }
             return ret;
         }
+
+        private int FindMaxCavity(List<int> peaks, int[] height)
+        {
+            int max = 0;
+            int width = peaks.Count() - 1;
+            for (int left = 0; left < peaks.Count; left++)
+            {
+                for (int right = left + 1; right < peaks.Count; right++)
+                {
+
+                }
+            }
+
+            return max;
+        }
     }
 }

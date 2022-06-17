@@ -31,5 +31,27 @@ namespace online_judge.leetcode.easy
 
             return ret;
         }
+
+        public IList<int> FindDisappearedNumbers2(int[] nums)
+        {
+            List<int> ret = new List<int>();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int nexIndex = Math.Abs(nums[i]) - 1;
+                if (nums[nexIndex] > 0)
+                {
+                    nums[nexIndex] *= -1;
+                }
+            }
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] > 0)
+                {
+                    ret.Add(i + 1);
+                }
+            }
+            return ret;
+        }
     }
 }
