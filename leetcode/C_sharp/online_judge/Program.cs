@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_1();
-			var medium = new online_judge.leetcode.medium.Problem56();
+			var medium = new online_judge.leetcode.medium.Problem3();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -38,9 +38,11 @@ namespace online_judge
 			ListNode node1 = new ListNode(4, node2);
 			ListNode head = new ListNode(1, node1);
 			*/
-			var reteasy = easy.TwoSum2(new int[] { 2, 7, 11, 15 }, 9);
-			reteasy = easy.TwoSum2(new int[] { 3, 2, 4 }, 6);
-			reteasy = easy.TwoSum2(new int[] { 3, 3 }, 6);
+			//var ret = medium.LengthOfLongestSubstring2("bbbbb");
+			var ret = medium.LengthOfLongestSubstring2("bbbbb");
+			ret = medium.LengthOfLongestSubstring2("pwwkew");
+			ret = medium.LengthOfLongestSubstring2("abcdedcba");
+			ret = medium.LengthOfLongestSubstring2("asjrgapa");
 			/*
 			var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
 			Console.WriteLine("ret:" + ret);

@@ -35,5 +35,24 @@ namespace online_judge.leetcode.medium
             }
             return res;
         }
+
+        public int LengthOfLongestSubstring2(string s)
+        {
+            int left = 0, right = 0, max = 0;
+            Hashtable table = new Hashtable();
+            for(right = 0; right < s.Length; right++)
+            {
+                if (table.Contains(s[right]))
+                {
+                    left = Math.Max(left, (int)table[s[right]] + 1); ;
+                    table.Remove(s[right]);
+                }
+                table.Add(s[right], right);
+                max = Math.Max(max, right - left + 1);
+            }
+
+
+            return max;
+        }
     }
 }
