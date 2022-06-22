@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem77();
+			var medium = new online_judge.leetcode.medium.Problem79();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -43,7 +43,24 @@ namespace online_judge
 			//ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
 			//ret = easy.LongestCommonPrefix(new string[] { "do", "racecar", "car" });
 			//ret = easy.LongestCommonPrefix(new string[] { "abc", "ab", "a" });
-			var ret = medium.Combine(4, 2);
+			/*
+			var ret = medium.Exist(new char[][] { 
+				new char[] { 'A', 'A' },
+			}
+			, "AA");
+			*/
+			var ret = medium.Exist(new char[][] {
+				new char[] { 'A', 'B', 'C', 'E' },
+				new char[] { 'S', 'F', 'E', 'S' },
+				new char[] { 'A', 'D', 'E', 'E' }}
+			, "ABCESEEEFS");
+			/*
+			ret = medium.Exist(new char[][] {
+				new char[] { 'A', 'B', 'C', 'E' },
+				new char[] { 'S', 'F', 'C', 'S' },
+				new char[] { 'A', 'D', 'E', 'E' }}
+			, "ABCB");
+			*/
 			/*
 			var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
 			Console.WriteLine("ret:" + ret);
