@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem79();
+			var medium = new online_judge.leetcode.medium.Problem33();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -49,11 +49,9 @@ namespace online_judge
 			}
 			, "AA");
 			*/
-			var ret = medium.Exist(new char[][] {
-				new char[] { 'A', 'B', 'C', 'E' },
-				new char[] { 'S', 'F', 'E', 'S' },
-				new char[] { 'A', 'D', 'E', 'E' }}
-			, "ABCESEEEFS");
+			//var ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8);
+			//ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6);
+			var ret = medium.Search(new int[] { 8,9,2,3,4 }, 9);
 			/*
 			ret = medium.Exist(new char[][] {
 				new char[] { 'A', 'B', 'C', 'E' },

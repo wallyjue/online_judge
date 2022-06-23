@@ -68,35 +68,30 @@ namespace online_judge.leetcode.medium
             visited[x][y] = true;
             curr = curr + toAdd;
             // try [x - 1][y]
-            // backtracking
             if (x - 1 >= 0)
             {
                 ret |= backtracking(board[x - 1][y], curr, x - 1, y, visited);
             }
-            
-            // remove [x - 1][y]
-            //visited[x-1][y] = true;
 
             // try [x + 1][y]
             if (x + 1 < board.Length)
             {
                 ret |= backtracking(board[x + 1][y], curr, x + 1, y, visited);
             }
-            // remove [x + 1][y]
 
             // try [x][y - 1]
             if (y - 1 >= 0)
             {
                 ret |= backtracking(board[x][y - 1], curr, x, y - 1, visited);
             }
-            // remove [x][y - 1]
 
             // try [x][y + 1]
             if (y + 1 < board[0].Length)
             {
                 ret |= backtracking(board[x][y + 1], curr, x, y + 1, visited);
             }
-            // remove [x][y + 1]
+
+            // reset visited node
             visited[x][y] = ret;
             return ret;
         }
