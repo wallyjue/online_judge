@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem33();
+			var medium = new online_judge.leetcode.medium.Problem153();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -51,7 +51,20 @@ namespace online_judge
 			*/
 			//var ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8);
 			//ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6);
-			var ret = medium.Search(new int[] { 8,9,2,3,4 }, 9);
+			var ret = medium.FindMin(new int[] { 11, 13, 15, 17 });
+			ret = medium.FindMin(new int[] { 2, 3, 4, 5, 1 });
+			/*
+			var ret = medium.SearchMatrix(new int[][] {
+					new int[] { 1,3,5,7 },
+					new int[] { 10,11,16,20 },
+					new int[] { 23,30,34,60 }
+				}, 3);
+			ret = medium.SearchMatrix(new int[][] {
+					new int[] { 1,3,5,7 },
+					new int[] { 10,11,16,20 },
+					new int[] { 23,30,34,60 }
+				}, 13);
+			*/
 			/*
 			ret = medium.Exist(new char[][] {
 				new char[] { 'A', 'B', 'C', 'E' },
