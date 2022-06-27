@@ -18,26 +18,26 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem162();
+			var medium = new online_judge.leetcode.medium.Problem82();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
 			// [[1,4,5],[1,3,4],[2,6]]
-			/*
-			ListNode node9 = new ListNode(10, null);
-			ListNode node8 = new ListNode(9, node9);
+			
+			//ListNode node9 = new ListNode(10, null);
+			//ListNode node8 = new ListNode(9, node9);
 
-			ListNode node7 = new ListNode(6, null);
-			ListNode node6 = new ListNode(2, node7);
+			//ListNode node7 = new ListNode(6, null);
+			ListNode node6 = new ListNode(5, null);
 
-			ListNode node5 = new ListNode(4, null);
-			ListNode node4 = new ListNode(3, node5);
-			ListNode node3 = new ListNode(1, node4);
+			ListNode node5 = new ListNode(4, node6);
+			ListNode node4 = new ListNode(4, node5);
+			ListNode node3 = new ListNode(3, node4);
 
-			ListNode node2 = new ListNode(5, null);
-			ListNode node1 = new ListNode(4, node2);
+			ListNode node2 = new ListNode(3, node3);
+			ListNode node1 = new ListNode(2, node2);
 			ListNode head = new ListNode(1, node1);
-			*/
+			
 			//var ret = medium.LengthOfLongestSubstring2("bbbbb");
 			//var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
 			//ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
@@ -51,10 +51,7 @@ namespace online_judge
 			*/
 			//var ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8);
 			//ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6);
-			var ret = medium.FindPeakElement(new int[] { 6, 5, 4, 3, 2, 3, 2 });
-			ret = medium.FindPeakElement(new int[] { 2, 3, 4, 5, 1 });
-			ret = medium.FindPeakElement(new int[] { 1, 2, 3, 1 });
-			ret = medium.FindPeakElement(new int[] { 1, 2, 1, 3, 5, 6, 4 });
+			var ret = medium.DeleteDuplicates(head);
 			/*
 			var ret = medium.SearchMatrix(new int[][] {
 					new int[] { 1,3,5,7 },
