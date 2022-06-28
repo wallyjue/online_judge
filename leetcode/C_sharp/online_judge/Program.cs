@@ -18,7 +18,7 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem15();
+			var medium = new online_judge.leetcode.medium.Problem547();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -50,14 +50,29 @@ namespace online_judge
 			}
 			, "AA");
 			*/
-			//var ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 8);
-			//ret = medium.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6);
-			var ret = medium.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 });
+			//[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+			var ret = medium.FindCircleNum(new int[][] {
+					new int [] {1, 1, 1, 0 },
+					new int [] {1, 1, 1, 0 },
+					new int [] {1, 1, 1, 0 },
+					new int [] {0, 0, 0, 1 }
+				});
+
+			ret = medium.FindCircleNum(new int[][] {
+					new int [] {1, 0, 0, 1 },
+					new int [] {0, 1, 1, 0 },
+					new int [] {0, 1, 1, 1 },
+					new int [] {1, 0, 1, 1 }
+				});
+			ret = medium.FindCircleNum(new int[][] {
+					new int [] {1,1,1,1,0 },
+					new int [] {1,1,1,1,0 },
+					new int [] {1,1,1,1,0  },
+					new int [] { 1, 1, 1, 1, 0 },
+					new int [] { 0,0,0,0, 1 },
+				});
 
 			
-			ret = medium.ThreeSum(new int[] {  });
-
-			ret = medium.ThreeSum(new int[] { 0 });
 			/*
 			var ret = medium.SearchMatrix(new int[][] {
 					new int[] { 1,3,5,7 },
