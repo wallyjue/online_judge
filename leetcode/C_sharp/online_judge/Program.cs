@@ -18,14 +18,29 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem209();
+			var medium = new online_judge.leetcode.medium.Problem117();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+			Node node7 = new Node(7, null, null, null);
+			Node node6 = new Node(15, null, null, null);
+			Node node5 = new Node(5, null, null, null);
+			Node node4 = new Node(4, null, null, null);
+			Node node3 = new Node(20, node6, node7, null);
+			Node node2 = new Node(9, null, null, null);
+			Node node1 = new Node(3, node2, node3, null);
 
-			var ret = medium.MinSubArrayLen( 7,new int[] { 2, 3, 1, 2, 4, 3 });
+			medium.Connect(node1);
+			//[3,9,20,null,null,15,7]
+
+			//Node node6 = new Node(6, null, null, null);
+
+
+
+
+
 			//var ret = medium.MinSubArrayLen( 11, new int[] { 1, 2, 3, 4, 5 });
-			
+
 			// [[1,4,5],[1,3,4],[2,6]]
 
 			//ListNode node9 = new ListNode(10, null);
@@ -105,5 +120,5 @@ namespace online_judge
 			*/
 
 		}
-    }
+	}
 }
