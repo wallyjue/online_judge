@@ -18,10 +18,14 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem547();
+			var medium = new online_judge.leetcode.medium.Problem209();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+
+			var ret = medium.MinSubArrayLen( 7,new int[] { 2, 3, 1, 2, 4, 3 });
+			//var ret = medium.MinSubArrayLen( 11, new int[] { 1, 2, 3, 4, 5 });
+			
 			// [[1,4,5],[1,3,4],[2,6]]
 
 			//ListNode node9 = new ListNode(10, null);
@@ -51,6 +55,7 @@ namespace online_judge
 			, "AA");
 			*/
 			//[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+			/*
 			var ret = medium.FindCircleNum(new int[][] {
 					new int [] {1, 1, 1, 0 },
 					new int [] {1, 1, 1, 0 },
@@ -71,8 +76,8 @@ namespace online_judge
 					new int [] { 1, 1, 1, 1, 0 },
 					new int [] { 0,0,0,0, 1 },
 				});
+			*/
 
-			
 			/*
 			var ret = medium.SearchMatrix(new int[][] {
 					new int[] { 1,3,5,7 },
