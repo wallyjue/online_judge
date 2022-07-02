@@ -31,14 +31,12 @@ namespace online_judge.leetcode.medium
             for (int i = index; i >= 0; i--)
             {
                 var list = addingArray.Where((x, idx) => idx != i).ToList();
-                //var list = addingArray.Where(x => x != addingArray[i]).ToList();
                 
                 if (list.Count() == 0)
                 {
                     return;
                 }
 
-                list.Sort();
                 var temp = string.Empty;
                 list.ForEach(x => temp += x.ToString());
                 if (!table.Contains(temp))
