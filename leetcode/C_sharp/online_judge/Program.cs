@@ -18,13 +18,13 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem90();
+			var medium = new online_judge.leetcode.medium.Problem39();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
 
-			medium.SubsetsWithDup(new int[] { 4, 1,0 });
-			medium.SubsetsWithDup(new int[] { 0 });
+			medium.CombinationSum(new int[] { 1,2 }, 4);
+			medium.CombinationSum(new int[] { 2,3,5 }, 8);
 
 
 
