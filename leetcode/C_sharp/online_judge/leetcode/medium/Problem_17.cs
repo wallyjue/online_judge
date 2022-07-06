@@ -8,6 +8,14 @@ namespace online_judge.leetcode.medium
 	{
 		public IList<string> LetterCombinations(string digits)
 		{
+			List<string> ret = new List<string>();
+
+			return ret;
+		}
+
+
+		public IList<string> LetterCombinations_(string digits)
+		{
 			if (digits == "") return new List<string>();
 
 			char[] input = digits.ToCharArray();
