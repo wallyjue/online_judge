@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,44 +13,49 @@ namespace online_judge.leetcode.medium
         {
             int ret = 0;
             int left = 0, right = 0;
-            int fruit1 = -1, fruit2 = -1;
+            int newFruit = -1, lastFruit = -1;
 
-            for(right = 0; right < fruits.Length; right++)
+            for (right = 0; right < fruits.Length; right++)
             {
-                if (fruit1 < 0 || fruit2 < 0)
+                if (newFruit < 0 || lastFruit < 0)
                 {
-                    if (fruit1 < 0)
+                    if (newFruit < 0)
                     {
-                        fruit1 = fruits[right];
+                        newFruit = fruits[right];
                     }
-
-                    if (fruit2 < 0)
+                    else if (lastFruit < 0 && newFruit != fruits[right])
                     {
-                        fruit2 = fruits[right];
+                        lastFruit = newFruit;
+                        newFruit = fruits[right];
                     }
                 }
-                else if (!(fruits[right] == fruit1 || fruits[right] == fruit2))
+                else if (!(fruits[right] == newFruit || fruits[right] == lastFruit))
                 {
-                    while (!(fruits[right] == fruit1 || fruits[right] == fruit2))
+                    left = right;
+                    lastFruit = newFruit;
+                    newFruit = fruits[right];
+                    while (left >= 0)
                     {
-                        if (fruits[right] != fruit1)
+                        left--;
+                        if (!(fruits[left] == newFruit || fruits[left] == lastFruit))
                         {
-                            fruit1 = fruits[right];
+                            left++;
+                            break;
                         }
-                        else if (fruits[right] != fruit2)
-                        {
-                            fruit2 = fruits[right];
-                        }
-
-                        left++;
                     }
                 }
-
-
+                else
+                {
+                    if (fruits[right] != newFruit) 
+                    {
+                        int temp = newFruit;
+                        newFruit = lastFruit;
+                        lastFruit = temp;
+                    }
+                }
+                
                 ret = Math.Max(ret, right - left + 1);
             }
-
-
             return ret;
         }
     }
