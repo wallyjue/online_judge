@@ -18,14 +18,14 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem395();
+			var medium = new online_judge.leetcode.medium.Problem15();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			medium.LongestSubstring("ababacb", 3);
-			medium.LongestSubstring("a", 1);
-			medium.LongestSubstring("aaabb", 3);
-			medium.LongestSubstring("ababbc", 2);
+			medium.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 });
+			medium.ThreeSum(new int[] { 0, 1, 1 });
+			medium.ThreeSum(new int[] { 0, 0, 0 });
+			
 
 
 
