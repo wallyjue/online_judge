@@ -12,70 +12,46 @@ namespace online_judge.leetcode.hard
         public int Trap(int[] height)
         {
             int ret = 0;
-            int l = 0, r = 0;
+            int[] trappedWater = new int[height.Length];
+            int[] lmax = new int[height.Length];
+            int[] rmax = new int[height.Length];
 
-            List<int> peaks = new List<int>();
-            while(r < height.Length)
+            for(int cnt = 0; cnt < height.Length; cnt++)
             {
-                if (r+1 < height.Length && r > 0)
+                if (cnt == 0)
                 {
-                    if (height[r+1] < height[r] && height[r] > height[r-1])
-                    {
-                        Console.WriteLine("peak at:" + r);
-                        peaks.Add(r);
-                    }
+                    lmax[cnt] = 0;
                 }
                 else
                 {
-                    if (r == 0)
-                    {
-                        if (height[r+1] < height[r])
-                        {
-                            Console.WriteLine("peak at:" + r);
-                            peaks.Add(r);
-                        }
-                    }
-                    else
-                    {
-                        if (height[r - 1] < height[r])
-                        {
-                            Console.WriteLine("peak at:" + r);
-                            peaks.Add(r);
-                        }
-                    }
+                    lmax[cnt] = Math.Max(lmax[cnt - 1], height[cnt - 1]);
                 }
-                r++;
             }
 
-            int prevPeak = -1;
-            foreach (int peak in peaks)
+            for (int cnt = height.Length - 1; cnt > 0; cnt--)
             {
-                if (prevPeak >= 0)
+                if (cnt == height.Length - 1)
                 {
-                    int limit = Math.Min(height[prevPeak], height[peak]);
-                    for (int i = prevPeak + 1; i < peak; i++)
-                    {
-                        ret += limit - height[i];
-                    }
+                    rmax[cnt] = 0;
                 }
-                prevPeak = peak;
+                else
+                {
+                    rmax[cnt] = Math.Max(rmax[cnt + 1], height[cnt + 1]);
+                }
             }
+
+            for (int cnt = 0; cnt < height.Length; cnt++)
+            {
+                trappedWater[cnt] = Math.Min(lmax[cnt], rmax[cnt]) - height[cnt];
+                if (trappedWater[cnt] > 0)
+                {
+                    ret += trappedWater[cnt];
+                }
+            }
+
             return ret;
         }
 
-        private int FindMaxCavity(List<int> peaks, int[] height)
-        {
-            int max = 0;
-            int width = peaks.Count() - 1;
-            for (int left = 0; left < peaks.Count; left++)
-            {
-                for (int right = left + 1; right < peaks.Count; right++)
-                {
-
-                }
-            }
-
-            return max;
-        }
+        
     }
 }

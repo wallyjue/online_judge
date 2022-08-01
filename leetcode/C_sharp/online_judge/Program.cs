@@ -22,11 +22,10 @@ namespace online_judge
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			medium.ThreeSum(new int[] { -1, 0, 1, 2, -1, -4 });
-			medium.ThreeSum(new int[] { 0, 1, 1 });
-			medium.ThreeSum(new int[] { 0, 0, 0 });
-			
+			hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
+			hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
 
+			hard.Trap(new int[] { 0,0,0,0,0,0,0,0 });
 
 
 			Node node7 = new Node(7, null, null, null);
