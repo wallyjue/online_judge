@@ -2,7 +2,7 @@
 using online_judge.leetcode.easy;
 using online_judge.leetcode.medium;
 using System;
-
+using System.Collections.Generic;
 
 namespace online_judge
 {
@@ -18,15 +18,13 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem_14();
-			var medium = new online_judge.leetcode.medium.Problem15();
+			var medium = new online_judge.leetcode.medium.Problem139();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
-			hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
-
-			hard.Trap(new int[] { 0,0,0,0,0,0,0,0 });
-
+			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
+			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
+			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
 
 			Node node7 = new Node(7, null, null, null);
 			Node node6 = new Node(15, null, null, null);
