@@ -14,58 +14,40 @@ namespace online_judge.leetcode.medium
         Hashtable table = new Hashtable();
         public bool WordBreak(string s, IList<string> wordDict)
         {
+            /*
+            Set<String> wordDictSet = new HashSet<>(wordDict);
+            boolean[] dp = new boolean[s.length() + 1];
+            dp[0] = true;
+            for (int i = 1; i <= s.length(); i++) {
+                for (int j = 0; j < i; j++) {
+                    if (dp[j] && wordDictSet.contains(s.substring(j, i))) {
+                        dp[i] = true;
+                        break;
+                    }
+                }
+            }
+            return dp[s.length()];
+            */
             memo = new bool[s.Length + 1];
+            memo[0] = true;
             foreach(string word in wordDict)
             {
                 table.Add(word, true);
             }
 
-            bool ret = dynamicFunction(s, s.Length);
-
-            return ret;
-        }
-
-        private bool dynamicFunction(string s, int length)
-        {
-            bool ret = false;
-            if (length == 0)
+            for (int i = 1; i <= s.Length; i++)
             {
-                return true;
-            }
-
-            if (memo[length])
-            {
-                return true;
-            }
-
-            memo[length] = false;
-            for (int cnt = 0; cnt < length;cnt++)
-            {
-                bool right = table.Contains(s.Substring());
-                if (!right)
+                for (int j = 0; j < i; j++)
                 {
-                    continue;
+                    if (memo[j] && table.Contains(s.Substring(j, i - j)))
+                    {
+                        memo[i] = true;
+                        break;
+                    }
                 }
             }
 
-            /*
-            foreach (string word in wordDict)
-            {
-                if (s.Length < word.Length)
-                {
-                    continue;
-                }
-
-                string substring = s.Substring(0, word.Length);
-                if (substring == word)
-                {
-                    temp = s.Substring(word.Length, s.Length - substring.Length);
-                    ret |= dynamicFunction(temp, wordDict);
-                    if (ret) return ret;
-                }
-            }
-            */
-            return ret;
+            return memo[s.Length];
         }
     }
 }
