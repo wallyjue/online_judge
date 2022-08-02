@@ -27,6 +27,7 @@ namespace online_judge.leetcode.medium
 
         private bool dynamicFunction(string s, int length)
         {
+            bool ret = false;
             if (length == 0)
             {
                 return true;
@@ -40,21 +41,31 @@ namespace online_judge.leetcode.medium
             memo[length] = false;
             for (int cnt = 0; cnt < length;cnt++)
             {
-                bool right = table.Contains(s.Substring(cnt));
+                bool right = table.Contains(s.Substring());
                 if (!right)
                 {
                     continue;
                 }
-
-                bool left = dynamicFunction(s.Substring(0, cnt), cnt);
-                if (left)
-                {
-                    memo[length] = true;
-                    break;
-                }
             }
 
-            return memo[length];
+            /*
+            foreach (string word in wordDict)
+            {
+                if (s.Length < word.Length)
+                {
+                    continue;
+                }
+
+                string substring = s.Substring(0, word.Length);
+                if (substring == word)
+                {
+                    temp = s.Substring(word.Length, s.Length - substring.Length);
+                    ret |= dynamicFunction(temp, wordDict);
+                    if (ret) return ret;
+                }
+            }
+            */
+            return ret;
         }
     }
 }
