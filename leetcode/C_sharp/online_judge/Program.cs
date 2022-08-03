@@ -17,15 +17,16 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem_14();
+			var easy = new online_judge.leetcode.easy.Problem94();
 			var medium = new online_judge.leetcode.medium.Problem139();
 			var hard = new online_judge.leetcode.hard.Problem42();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+			/*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
 			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
-
+			*/
 			Node node7 = new Node(7, null, null, null);
 			Node node6 = new Node(15, null, null, null);
 			Node node5 = new Node(5, null, null, null);
@@ -34,7 +35,17 @@ namespace online_judge
 			Node node2 = new Node(9, null, null, null);
 			Node node1 = new Node(3, node2, node3, null);
 
-			
+
+
+			TreeNode treenode6 = new TreeNode(7);
+			TreeNode treenode5 = new TreeNode(6);
+			TreeNode treenode4 = new TreeNode(5);
+			TreeNode treenode3 = new TreeNode(4);
+			TreeNode treenode2 = new TreeNode(3, treenode5, treenode6);
+			TreeNode treenode1 = new TreeNode(2, treenode3, treenode4);
+			TreeNode root = new TreeNode(1, treenode1, treenode2);
+
+			easy.InorderTraversal(root);
 			//[3,9,20,null,null,15,7]
 
 			//Node node6 = new Node(6, null, null, null);
