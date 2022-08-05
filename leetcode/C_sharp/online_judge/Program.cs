@@ -19,8 +19,14 @@ namespace online_judge
 			*/
 			var easy = new online_judge.leetcode.easy.Problem94();
 			var medium = new online_judge.leetcode.medium.Problem139();
-			var hard = new online_judge.leetcode.hard.Problem42();
+			var hard = new online_judge.leetcode.hard.Problem4();
 			var explore = new online_judge.leetcode.explore.RecursionII();
+
+
+
+			//hard.FindMedianSortedArrays(new int[] { 1, 3 }, new int[] { 2 });
+			hard.FindMedianSortedArrays(new int[] { 1, 2 }, new int[] { 3, 4,5,6,7,8,9,1000 });
+
 
 			/*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
