@@ -27,7 +27,7 @@ namespace online_judge.leetcode.medium
                         int complement = -nums[x] - nums[y];
                         if (table.Contains(complement))
                         {
-                            ret.Add(new List<int> { nums[x] , nums[y], complement });
+                            ret.Add(new List<int> { nums[x], nums[y], complement });
                             while (y + 1 < nums.Length && nums[y] == nums[y + 1])
                                 ++y;
                         }
