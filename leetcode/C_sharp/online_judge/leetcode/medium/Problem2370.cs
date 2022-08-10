@@ -8,6 +8,9 @@ namespace online_judge.leetcode.medium
 {
     internal class Problem2370
     {
+        // f(n) = s[0] + f(n-1)
+
+
         public int LongestIdealString(string s, int k)
         {
             int lastAddedchar = 0;
