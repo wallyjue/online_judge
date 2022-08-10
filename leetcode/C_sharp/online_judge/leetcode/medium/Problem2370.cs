@@ -10,7 +10,18 @@ namespace online_judge.leetcode.medium
     {
         public int LongestIdealString(string s, int k)
         {
+            int lastAddedchar = 0;
+            string sub = string.Empty;
+            for(int cnt = 0; cnt < s.Length; cnt++)
+            {
+                if (lastAddedchar == 0 || Math.Abs(s[cnt] - lastAddedchar) <= k)
+                {
+                    lastAddedchar = s[cnt];
+                    sub += s[cnt];
+                }
+            }
 
+            return sub.Length;
         }
     }
 }
