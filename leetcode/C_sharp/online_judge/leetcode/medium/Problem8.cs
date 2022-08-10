@@ -4,7 +4,7 @@ using System.Text;
 
 namespace online_judge.leetcode.medium
 {
-    class Problem_8
+    class Problem8
     {
 		public int MyAtoi(string str)
 		{

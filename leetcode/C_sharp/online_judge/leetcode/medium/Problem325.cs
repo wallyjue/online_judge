@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace online_judge.leetcode.medium
 {
-    internal class Problem_325
+    internal class Problem325
     {
         public int MaxSubArrayLen(int[] nums, int k)
         {

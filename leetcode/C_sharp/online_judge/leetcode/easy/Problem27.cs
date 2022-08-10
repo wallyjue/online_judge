@@ -2,7 +2,7 @@
 
 namespace online_judge.leetcode.easy
 {
-    class Problem_27
+    class Problem27
     {
 		public int RemoveElement(int[] nums, int val)
 		{

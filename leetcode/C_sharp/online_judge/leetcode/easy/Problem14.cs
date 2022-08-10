@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace online_judge.leetcode.easy
 {
-    internal class Problem_14
+    internal class Problem14
     {
         public string LongestCommonPrefix(string[] strs)
         {

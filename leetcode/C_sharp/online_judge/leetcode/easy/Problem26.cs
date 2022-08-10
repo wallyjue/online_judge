@@ -4,7 +4,7 @@ using System.Text;
 
 namespace online_judge.leetcode.easy
 {
-    class Problem_26
+    class Problem26
     {
 		public int RemoveDuplicates(int[] nums)
 		{

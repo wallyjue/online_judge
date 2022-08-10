@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace online_judge.leetcode.medium
 {
-    internal class Problem_12
+    internal class Problem12
     {
         public string IntToRoman(int num)
         {

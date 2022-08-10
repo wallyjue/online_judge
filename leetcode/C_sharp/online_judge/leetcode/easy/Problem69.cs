@@ -4,7 +4,7 @@ using System.Text;
 
 namespace online_judge.leetcode.easy
 {
-    class Problem_69
+    class Problem69
     {
 		public int MySqrt(int x)
 		{

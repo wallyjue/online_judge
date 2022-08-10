@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace online_judge.leetcode.easy
 {
-    class Problem_7
+    class Problem7
     {
 		public int Reverse(int x)
 		{

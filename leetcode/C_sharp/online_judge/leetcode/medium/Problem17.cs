@@ -4,7 +4,7 @@ using System.Text;
 
 namespace online_judge.leetcode.medium
 {
-	class Problem_17
+	class Problem17
 	{
 		public IList<string> LetterCombinations(string digits)
 		{
