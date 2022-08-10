@@ -5,7 +5,7 @@ using System.Text;
 
 namespace online_judge.leetcode.medium
 {
-	class Problem_5
+	class Problem5
 	{
 		string s;
 		public string LongestPalindrome2(string s)
