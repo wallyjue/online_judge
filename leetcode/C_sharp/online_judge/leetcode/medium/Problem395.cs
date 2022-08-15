@@ -11,47 +11,62 @@ namespace online_judge.leetcode.medium
     {
         public int LongestSubstring(string s, int k)
         {
-            int ret = 0;
+            int max = 0;
             Hashtable table = new Hashtable();
-            Hashtable acceptedChars = new Hashtable();
             for (int cnt = 0; cnt < s.Length; cnt++)
             {
-                if(table.ContainsKey(s[cnt]))
+                if (table.Contains(s[cnt]))
                 {
-                    var temp = (int)table[s[cnt]];
+                    int count = (int)table[s[cnt]];
                     table.Remove(s[cnt]);
-                    table.Add(s[cnt], temp + 1);
-                    if (temp+1 >= k && !acceptedChars.ContainsKey(s[cnt]))
-                    {
-                        acceptedChars.Add(s[cnt], true);
-                    }
+                    table.Add(s[cnt], count + 1);
                 }
                 else
                 {
                     table.Add(s[cnt], 1);
-                    if (1 >= k && !acceptedChars.ContainsKey(s[cnt]))
-                    {
-                        acceptedChars.Add(s[cnt], true);
-                    }
                 }
             }
-
-            int tmp = 0;
+            string sub = string.Empty;
+            Dictionary<char,int> substring = new Dictionary<char, int>();
             for (int cnt = 0; cnt < s.Length; cnt++)
             {
-                if(acceptedChars.ContainsKey(s[cnt]))
+                if ((int)table[s[cnt]] >= k)
                 {
-                    tmp++;
+                    sub += s[cnt];
+                    if (!substring.ContainsKey(s[cnt]))
+                    {
+                        substring.Add(s[cnt], 1);
+                    }
+                    else
+                    {
+                        int count = (int)substring[s[cnt]];
+                        substring.Remove(s[cnt]);
+                        substring.Add(s[cnt], count + 1);
+                    }
+
+                    bool isValid = true;
+                    foreach(var alpha in substring)
+                    {
+                        if (alpha.Value < k)
+                        {
+                            isValid = false;
+                        }
+                    }
+
+                    if (isValid)
+                    {
+                        max = Math.Max(max, sub.Length);
+                    }
+                    
                 }
                 else
                 {
-                    tmp = 0;
+                    substring = new Dictionary<char, int>();
+                    sub = string.Empty;
                 }
-
-                ret = Math.Max(tmp, ret);
             }
 
-            return ret;
+            return max;
         }
     }
 }

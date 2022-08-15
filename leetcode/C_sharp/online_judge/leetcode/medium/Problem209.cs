@@ -10,19 +10,22 @@ namespace online_judge.leetcode.medium
     {
         public int MinSubArrayLen(int target, int[] nums)
         {
+            int right = 0, left = 0;
             int min = int.MaxValue;
-            int left = 0, right = 0;
             int sum = 0;
-            for(right = 0; right < nums.Length; ++right)
+            for( right = 0; right < nums.Length;right++)
             {
                 sum += nums[right];
+
                 while (sum >= target)
                 {
                     min = Math.Min(min, right - left + 1);
-                    sum -= nums[left++];
+                    sum -= nums[left];
+                    left++;
                 }
                 
             }
+
             return min == int.MaxValue ? 0 : min;
         }
     }
