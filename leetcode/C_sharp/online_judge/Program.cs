@@ -17,17 +17,19 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem94();
+			var easy = new online_judge.leetcode.easy.Problem219();
 			var medium = new online_judge.leetcode.medium.Problem209();
 			var hard = new online_judge.leetcode.hard.Problem4();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+			easy.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1 }, 3);
+			easy.ContainsNearbyDuplicate(new int[] { 1, 0, 1, 1 }, 1);
+			easy.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
+
 
 			//medium.LongestIdealString("pvjcci", 4);
 			//medium.LongestIdealString("abcd", 3);
-			medium.MinSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 });
-			medium.MinSubArrayLen(4, new int[] { 1, 4, 4 });
-			medium.MinSubArrayLen(11, new int[] { 1, 1, 1, 1, 1, 1, 1, 1 });
+
 			//medium.LongestSubstring("aaabb", 3);
 			//medium.LongestSubstring("ababbc", 2);
 			//medium.LongestSubstring("ababacb", 3);
