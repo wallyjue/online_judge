@@ -18,13 +18,12 @@ namespace online_judge
 				}
 			*/
 			var easy = new online_judge.leetcode.easy.Problem219();
-			var medium = new online_judge.leetcode.medium.Problem209();
+			var medium = new online_judge.leetcode.medium.Problem159();
 			var hard = new online_judge.leetcode.hard.Problem4();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			easy.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1 }, 3);
-			easy.ContainsNearbyDuplicate(new int[] { 1, 0, 1, 1 }, 1);
-			easy.ContainsNearbyDuplicate(new int[] { 1, 2, 3, 1, 2, 3 }, 2);
+			medium.LengthOfLongestSubstringTwoDistinct("eceba");
+			medium.LengthOfLongestSubstringTwoDistinct("ccaabbb");
 
 
 			//medium.LongestIdealString("pvjcci", 4);
