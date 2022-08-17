@@ -19,26 +19,26 @@ namespace online_judge
 			*/
 			var easy = new online_judge.leetcode.easy.Problem219();
 			var medium = new online_judge.leetcode.medium.Problem424();
-			var hard = new online_judge.leetcode.hard.Problem4();
+			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			//medium.CharacterReplacement("ABAB", 2);
-			medium.CharacterReplacement("AABABBA", 1);
+            hard.FindMin(new int[] { 2,2,2,0,1 });
+            hard.FindMin(new int[] { 1, 1, 1, 1, 1, 1, 1 });
 
-			//medium.LongestIdealString("pvjcci", 4);
-			//medium.LongestIdealString("abcd", 3);
+            //medium.LongestIdealString("pvjcci", 4);
+            //medium.LongestIdealString("abcd", 3);
 
-			//medium.LongestSubstring("aaabb", 3);
-			//medium.LongestSubstring("ababbc", 2);
-			//medium.LongestSubstring("ababacb", 3);
-			//medium.LongestSubstring("a", 1);
+            //medium.LongestSubstring("aaabb", 3);
+            //medium.LongestSubstring("ababbc", 2);
+            //medium.LongestSubstring("ababacb", 3);
+            //medium.LongestSubstring("a", 1);
 
-			/*
+            /*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
 			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
 			*/
-			Node node7 = new Node(7, null, null, null);
+            Node node7 = new Node(7, null, null, null);
 			Node node6 = new Node(15, null, null, null);
 			Node node5 = new Node(5, null, null, null);
 			Node node4 = new Node(4, null, null, null);
