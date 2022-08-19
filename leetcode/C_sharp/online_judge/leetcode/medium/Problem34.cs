@@ -15,9 +15,9 @@ namespace online_judge.leetcode.medium
             {
                 return new int[] { -1, -1 };
             }
-            int left = binarySearchLeft(nums, target);
+            int left = binarySearchLeft2(nums, target);
 
-            int right = binarySearchRight(nums, target);
+            int right = binarySearchRight2(nums, target);
 
             return new int [] { left, right };
         }
@@ -44,6 +44,45 @@ namespace online_judge.leetcode.medium
             }
             return false;
         }
+
+        private int binarySearchLeft2(int[] nums, int target)
+        {
+            int left = 0, right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                int mid = (left + right) / 2;
+                if (nums[mid] >= target)
+                {
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
+            return left;
+        }
+
+        private int binarySearchRight2(int[] nums, int target)
+        {
+            int left = 0, right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                int mid = (left + right) / 2;
+                if (nums[mid] <= target)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+            return right;
+        }
+
 
         private int binarySearchLeft(int[] nums, int target)
         {
