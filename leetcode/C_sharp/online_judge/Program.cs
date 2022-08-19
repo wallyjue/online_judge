@@ -17,14 +17,15 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
-			var easy = new online_judge.leetcode.easy.Problem219();
+			var easy = new online_judge.leetcode.easy.Problem744();
 			var medium = new online_judge.leetcode.medium.Problem424();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            hard.FindMin(new int[] { 2,2,2,0,1 });
-            hard.FindMin(new int[] { 1, 1, 1, 1, 1, 1, 1 });
-
+			//easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
+            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
+            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
+            easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'j');
             //medium.LongestIdealString("pvjcci", 4);
             //medium.LongestIdealString("abcd", 3);
 

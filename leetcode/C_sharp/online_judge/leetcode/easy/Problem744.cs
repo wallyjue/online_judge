@@ -10,9 +10,33 @@ namespace online_judge.leetcode.easy
     {
         public char NextGreatestLetter(char[] letters, char target)
         {
-            char ret = 'a';
+            int left = 0, right = letters.Length - 1;
+            while (left < right)
+            {
+                int mid = left + (right - left) / 2 + 1;
+                if (letters[mid] > target)
+                {
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid;
+                }
+            }
 
-            return ret;
+            if (left == letters.Length - 1)
+            {
+                return letters[0];
+            }
+
+            if (letters[left] > target)
+            {
+                return letters[left];
+            }
+            else
+            {
+                return letters[left + 1];
+            }
         }
     }
 }
