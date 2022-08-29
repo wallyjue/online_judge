@@ -3,6 +3,7 @@ using online_judge.leetcode.easy;
 using online_judge.leetcode.medium;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace online_judge
 {
@@ -17,6 +18,7 @@ namespace online_judge
 					Console.WriteLine(line);
 				}
 			*/
+
 			var easy = new online_judge.leetcode.easy.Problem744();
 			var medium = new online_judge.leetcode.medium.Problem424();
 			var hard = new online_judge.leetcode.hard.Problem154();
