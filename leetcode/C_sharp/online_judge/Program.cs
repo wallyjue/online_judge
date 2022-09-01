@@ -20,15 +20,19 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem744();
-			var medium = new online_judge.leetcode.medium.Problem18();
+			var medium = new online_judge.leetcode.medium.Problem153();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			//easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
-			//easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
-			//easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
-			//medium.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
-            medium.FourSum(new int[] { 1000000000, 1000000000, 1000000000, 1000000000 }, -294967296);
+            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
+            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
+            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
+            //medium.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
+            //medium.FindMin2(new int[] { 3, 4, 5, 1, 2 });
+
+            hard.FindMin2(new int[] { 10, 1, 10,10,10 });
+            hard.FindMin2(new int[] { 3,3,3,1 });
+            hard.FindMin2(new int[] { 3, 3, 3, 3, 3, 3, 3, 3, 1, 3 });
 
             /*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
