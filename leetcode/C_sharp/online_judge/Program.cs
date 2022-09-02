@@ -19,8 +19,8 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem744();
-			var medium = new online_judge.leetcode.medium.Problem153();
+			var easy = new online_judge.leetcode.easy.Problem2089();
+			var medium = new online_judge.leetcode.medium.Problem34();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -29,10 +29,12 @@ namespace online_judge
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
             //medium.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
             //medium.FindMin2(new int[] { 3, 4, 5, 1, 2 });
+            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 4);
+            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 2);
+            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 3);
+            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 5);
 
-            hard.FindMin2(new int[] { 10, 1, 10,10,10 });
-            hard.FindMin2(new int[] { 3,3,3,1 });
-            hard.FindMin2(new int[] { 3, 3, 3, 3, 3, 3, 3, 3, 1, 3 });
+           
 
             /*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
