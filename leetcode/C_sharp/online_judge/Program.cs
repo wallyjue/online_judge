@@ -20,7 +20,7 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem2089();
-			var medium = new online_judge.leetcode.medium.Problem34();
+			var medium = new online_judge.leetcode.medium.TimeMap();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -29,13 +29,48 @@ namespace online_judge
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
             //medium.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
             //medium.FindMin2(new int[] { 3, 4, 5, 1, 2 });
-            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 4);
-            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 2);
-            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 3);
-            easy.TargetIndices(new int[] { 1, 2, 5, 2, 3 }, 5);
+            /*
+            var ret = medium.GetMinIndex2(new List<int> { 1 }, 3);
 
-           
+            ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 4);
+            ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 2);
+            ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 3);
+            ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 5);
 
+
+            ret = medium.GetMinIndex2(new List<int> { 1, 4 }, 3);
+            ret = medium.GetMinIndex2(new List<int> { 1, 4 }, 5);
+            ret = medium.GetMinIndex2(new List<int> { 1, 4, 5 }, 4);
+            */
+
+            //["TimeMap","set","set","get","set","get","get"]
+			//[[],["a","bar",1],["x","b",3],["b",3],["foo","bar2",4],["foo",4],["foo",5]]
+
+
+            medium.Set("a", "bar", 1);
+            medium.Set("x", "b", 3);
+            var ret2 = medium.Get("b", 3);
+            medium.Set("foo", "bar2", 4);
+            ret2 = medium.Get("foo", 4);
+            ret2 = medium.Get("foo", 5);
+            /*
+            medium.Set("ctondw", "ztpearaw", 1);
+            medium.Set("vrobykydll", "hwliiq", 2);
+            medium.Set("gszaw", "ztpearaw", 3);
+            medium.Set("ctondw", "gszaw", 4);
+
+            var ret2 = medium.Get("gszaw", 5);
+            ret2 = medium.Get("ctondw", 6);
+            ret2 = medium.Get("ctondw", 7);
+            ret2 = medium.Get("gszaw", 8);
+            ret2 = medium.Get("vrobykydll", 9);
+            ret2 = medium.Get("ctondw", 10);
+            medium.Set("vrobykydll", "kcvcjzzwx", 11);
+            ret2 = medium.Get("vrobykydll", 12);
+            ret2 = medium.Get("ctondw", 13);
+			*/
+            //["TimeMap","set","set","set","set","get","get","get","get","get","get","set","get","get","get","set","set","set","set","get","get"]
+            //["ctondw",7],["gszaw",8],["vrobykydll",9],["ctondw",10],["vrobykydll","kcvcjzzwx",11],["vrobykydll",12],["ctondw",13],["vrobykydll",14],["ztpearaw","zondoubtib",15],["kcvcjzzwx","hwliiq",16],["wtgbfvg","vrobykydll",17],["hwliiq","gzsiivks",18],["kcvcjzzwx",19],["ztpearaw",20]]
             /*
 			medium.WordBreak("leetcode", new List<string> { "leet", "code" });
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
