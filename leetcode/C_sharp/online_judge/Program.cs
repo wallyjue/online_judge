@@ -20,9 +20,14 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem141();
-			var medium = new online_judge.leetcode.medium.Problem143();
+			var medium = new online_judge.leetcode.medium.Problem56();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
+
+
+			medium.Merge(new int[][] { new int[] { 2, 6 }, new int[] { 1, 3 }, new int[] { 8, 10 }, new int[] { 15, 18 } });
+            medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 4, 5 } });
+
 
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
@@ -69,7 +74,7 @@ namespace online_judge
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
 			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
 			*/
-			/*
+            /*
             Node node7 = new Node(7, null, null, null);
 			Node node6 = new Node(15, null, null, null);
 			Node node5 = new Node(5, null, null, null);
@@ -80,7 +85,7 @@ namespace online_judge
 			*/
 
 
-			TreeNode treenode6 = new TreeNode(7);
+            TreeNode treenode6 = new TreeNode(7);
 			TreeNode treenode5 = new TreeNode(6);
 			TreeNode treenode4 = new TreeNode(5);
 			TreeNode treenode3 = new TreeNode(4);
