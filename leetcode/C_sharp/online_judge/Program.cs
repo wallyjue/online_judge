@@ -19,8 +19,8 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem2089();
-			var medium = new online_judge.leetcode.medium.TimeMap();
+			var easy = new online_judge.leetcode.easy.Problem141();
+			var medium = new online_judge.leetcode.medium.Problem143();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -44,15 +44,8 @@ namespace online_judge
             */
 
             //["TimeMap","set","set","get","set","get","get"]
-			//[[],["a","bar",1],["x","b",3],["b",3],["foo","bar2",4],["foo",4],["foo",5]]
+            //[[],["a","bar",1],["x","b",3],["b",3],["foo","bar2",4],["foo",4],["foo",5]]
 
-
-            medium.Set("a", "bar", 1);
-            medium.Set("x", "b", 3);
-            var ret2 = medium.Get("b", 3);
-            medium.Set("foo", "bar2", 4);
-            ret2 = medium.Get("foo", 4);
-            ret2 = medium.Get("foo", 5);
             /*
             medium.Set("ctondw", "ztpearaw", 1);
             medium.Set("vrobykydll", "hwliiq", 2);
@@ -76,6 +69,7 @@ namespace online_judge
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
 			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
 			*/
+			/*
             Node node7 = new Node(7, null, null, null);
 			Node node6 = new Node(15, null, null, null);
 			Node node5 = new Node(5, null, null, null);
@@ -83,7 +77,7 @@ namespace online_judge
 			Node node3 = new Node(20, node6, node7, null);
 			Node node2 = new Node(9, null, null, null);
 			Node node1 = new Node(3, node2, node3, null);
-
+			*/
 
 
 			TreeNode treenode6 = new TreeNode(7);
@@ -94,7 +88,7 @@ namespace online_judge
 			TreeNode treenode1 = new TreeNode(2, treenode3, treenode4);
 			TreeNode root = new TreeNode(1, treenode1, treenode2);
 
-			
+
 			//[3,9,20,null,null,15,7]
 
 			//Node node6 = new Node(6, null, null, null);
@@ -111,30 +105,30 @@ namespace online_judge
 			//ListNode node8 = new ListNode(9, node9);
 
 			//ListNode node7 = new ListNode(6, null);
-			/*
-			ListNode node6 = new ListNode(5, null);
+			
+            ListNode listnode6 = new ListNode(6, null);
 
-			ListNode node5 = new ListNode(4, node6);
-			ListNode node4 = new ListNode(4, node5);
-			ListNode node3 = new ListNode(3, node4);
+			ListNode listnode5 = new ListNode(5, listnode6);
+			ListNode listnode4 = new ListNode(4, listnode5);
+			ListNode listnode3 = new ListNode(3, listnode4);
 
-			ListNode node2 = new ListNode(3, node3);
-			ListNode node1 = new ListNode(2, node2);
-			ListNode head = new ListNode(1, node1);
-			*/
-			//var ret = medium.LengthOfLongestSubstring2("bbbbb");
-			//var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
-			//ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
-			//ret = easy.LongestCommonPrefix(new string[] { "do", "racecar", "car" });
-			//ret = easy.LongestCommonPrefix(new string[] { "abc", "ab", "a" });
-			/*
+			ListNode listnode2 = new ListNode(2, listnode3);
+            ListNode listnode1 = new ListNode(1, listnode2);
+            ListNode head = new ListNode(0, listnode1);
+
+            //var ret = medium.LengthOfLongestSubstring2("bbbbb");
+            //var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
+            //ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
+            //ret = easy.LongestCommonPrefix(new string[] { "do", "racecar", "car" });
+            //ret = easy.LongestCommonPrefix(new string[] { "abc", "ab", "a" });
+            /*
 			var ret = medium.Exist(new char[][] { 
 				new char[] { 'A', 'A' },
 			}
 			, "AA");
 			*/
-			//[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
-			/*
+            //[[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
+            /*
 			var ret = medium.FindCircleNum(new int[][] {
 					new int [] {1, 1, 1, 0 },
 					new int [] {1, 1, 1, 0 },
@@ -157,7 +151,7 @@ namespace online_judge
 				});
 			*/
 
-			/*
+            /*
 			var ret = medium.SearchMatrix(new int[][] {
 					new int[] { 1,3,5,7 },
 					new int[] { 10,11,16,20 },
@@ -169,20 +163,20 @@ namespace online_judge
 					new int[] { 23,30,34,60 }
 				}, 13);
 			*/
-			/*
+            /*
 			ret = medium.Exist(new char[][] {
 				new char[] { 'A', 'B', 'C', 'E' },
 				new char[] { 'S', 'F', 'C', 'S' },
 				new char[] { 'A', 'D', 'E', 'E' }}
 			, "ABCB");
 			*/
-			/*
+            /*
 			var ret = hard.Trap(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 });
 			Console.WriteLine("ret:" + ret);
 			ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
 			Console.WriteLine("ret:" + ret);
 			*/
 
-		}
+        }
 	}
 }
