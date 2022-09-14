@@ -20,12 +20,13 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem252();
-			var medium = new online_judge.leetcode.medium.Problem57();
+			var medium = new online_judge.leetcode.medium.Problem253();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-			easy.CanAttendMeetings(new int[][] { new int[] { 13, 15 }, new int[] { 1,13 } });
-            easy.CanAttendMeetings(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 } });
+            medium.MinMeetingRooms(new int[][] { new int[] { 2, 10 }, new int[] { 4,10 }, new int[] { 10,20 }, new int[] { 10, 30 } });
+            medium.MinMeetingRooms(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 }, new int[] { 15, 20 } });
+            medium.MinMeetingRooms(new int[][] { new int[] { 7, 10 }, new int[] { 2, 4 }});
 
 
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');

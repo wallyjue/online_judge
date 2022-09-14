@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,37 @@ namespace online_judge.leetcode.medium
     {
         public int MinMeetingRooms(int[][] intervals)
         {
-            int ret = 0;
+            int ret = 1;
+            List<int> endtime = new List<int>();
+
+            if (intervals.Length == 1)
+            {
+                return ret;
+            }
+
             Array.Sort(intervals, this.Compare);
+            for (int cnt = 0; cnt < intervals.Length; cnt++)
+            {
+                if (cnt == 0)
+                {
+                    endtime.Add(intervals[cnt][1]);
+                    continue;
+                }
+
+                var lastEndTime = endtime.Take(1).First();
+                if (intervals[cnt][0] < lastEndTime)
+                {
+                    ret++;
+                }
+                else
+                {
+                    endtime.Remove(lastEndTime);
+                }
+
+                endtime.Add(intervals[cnt][1]);
+                endtime.Sort();
+            }
+
 
             return ret;
         }
