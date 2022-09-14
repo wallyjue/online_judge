@@ -11,6 +11,10 @@ namespace online_judge.leetcode.hard
         public int MostBooked(int n, int[][] meetings)
         {
             int ret = 0;
+            int[] lastEndtimes = new int[n];
+            int[] bookedTimes = new int[n];
+
+
 
             return ret;
         }
