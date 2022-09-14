@@ -12,11 +12,13 @@ namespace online_judge.leetcode.medium
 			bool isNegative = false;
 			char[] data = input.ToCharArray();
 			isNegative = data[0] == '-' ? true : false;
-
+			
+			/*
 			for(int cnt = 0; cnt < data.Length;cnt++)
 			{
 				int a = '0';
 			}
+			*/
 
 			return 0;
 		}

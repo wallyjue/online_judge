@@ -16,7 +16,7 @@ namespace online_judge.leetcode.easy
 			int ret = 0;
 			x = isNegative ? -x : x;
 
-			for(int radix = 0, number = 0, mod = 10, power = 1; radix < 10; radix++)
+			for(int radix = 0, mod = 10, power = 1; radix < 10; radix++)
 			{
 				numbers[radix] = radix < 9 ? (x % mod) / power : x / power;
 				if (numbers[radix] != 0) decimals = radix;
