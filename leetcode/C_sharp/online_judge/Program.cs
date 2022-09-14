@@ -19,14 +19,13 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem141();
-			var medium = new online_judge.leetcode.medium.Problem56();
+			var easy = new online_judge.leetcode.easy.Problem252();
+			var medium = new online_judge.leetcode.medium.Problem57();
 			var hard = new online_judge.leetcode.hard.Problem154();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-
-			medium.Merge(new int[][] { new int[] { 2, 6 }, new int[] { 1, 3 }, new int[] { 8, 10 }, new int[] { 15, 18 } });
-            medium.Merge(new int[][] { new int[] { 1, 4 }, new int[] { 4, 5 } });
+			easy.CanAttendMeetings(new int[][] { new int[] { 13, 15 }, new int[] { 1,13 } });
+            easy.CanAttendMeetings(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 } });
 
 
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
