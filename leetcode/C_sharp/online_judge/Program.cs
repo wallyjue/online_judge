@@ -21,12 +21,15 @@ namespace online_judge
 
 			var easy = new online_judge.leetcode.easy.Problem252();
 			var medium = new online_judge.leetcode.medium.Problem253();
-			var hard = new online_judge.leetcode.hard.Problem154();
+			var hard = new online_judge.leetcode.hard.Problem2402();
 			var explore = new online_judge.leetcode.explore.RecursionII();
-
-            medium.MinMeetingRooms(new int[][] { new int[] { 2, 10 }, new int[] { 4,10 }, new int[] { 10,20 }, new int[] { 10, 30 } });
-            medium.MinMeetingRooms(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 }, new int[] { 15, 20 } });
-            medium.MinMeetingRooms(new int[][] { new int[] { 7, 10 }, new int[] { 2, 4 }});
+            
+			hard.MostBooked(4, new int[][] { new int[] { 18, 19 }, new int[] { 3,12 }, new int[] { 17,19 }, new int[] { 2,13 }, new int[] { 7, 10} });
+            hard.MostBooked(2, new int[][] { new int[] { 0, 10 }, new int[] { 1,5 }, new int[] { 2,7 }, new int[] { 3,4 } });
+            hard.MostBooked(3, new int[][] { new int[] { 1,20 }, new int[] { 2,10 }, new int[] { 3,5 }, new int[] { 4,9 }, new int[] { 6,8 } });
+            //medium.MinMeetingRooms(new int[][] { new int[] { 2, 10 }, new int[] { 4,10 }, new int[] { 10,20 }, new int[] { 10, 30 } });
+            //medium.MinMeetingRooms(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 }, new int[] { 15, 20 } });
+            //medium.MinMeetingRooms(new int[][] { new int[] { 7, 10 }, new int[] { 2, 4 }});
 
 
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
