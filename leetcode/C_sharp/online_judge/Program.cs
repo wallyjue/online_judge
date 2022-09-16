@@ -112,10 +112,27 @@ namespace online_judge
 			ListNode listnode5 = new ListNode(6, listnode6);
 			ListNode listnode4 = new ListNode(5, listnode5);
 
-			ListNode listnode3 = new ListNode(3, null);
+            // [1,0,0,0,0,   0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0,1]
+            // [5,6,4]
+			ListNode listnode999 = new ListNode(1, null);
+            ListNode listnode25 = new ListNode(0, listnode999);
+            ListNode listnode24 = new ListNode(0, listnode25);
+            ListNode listnode23 = new ListNode(0, listnode24);
+            ListNode listnode22 = new ListNode(0, listnode23);
+            ListNode listnode21 = new ListNode(0, listnode22);
+            ListNode listnode20 = new ListNode(0, listnode21);
+            ListNode listnode19 = new ListNode(0, listnode20);
+            ListNode listnode18 = new ListNode(0, listnode19);
+            ListNode listnode17 = new ListNode(0, listnode18);
+            ListNode listnode16 = new ListNode(0, listnode17);
+            ListNode listnode15 = new ListNode(0, listnode16);
+            ListNode listnode14 = new ListNode(0, listnode15);
+            ListNode listnode13 = new ListNode(0, listnode14);
+            ListNode listnode12 = new ListNode(0, listnode13);
 
-			ListNode listnode2 = new ListNode(4, listnode3);
-            ListNode listnode1 = new ListNode(2, listnode2);
+            ListNode listnode11 = new ListNode(0, listnode12);
+            ListNode listnode2 = new ListNode(0, listnode11);
+            ListNode listnode1 = new ListNode(1, listnode2);
             //ListNode head = new ListNode(0, listnode1);
 			medium.AddTwoNumbers(listnode1, listnode4);
             //var ret = medium.LengthOfLongestSubstring2("bbbbb");

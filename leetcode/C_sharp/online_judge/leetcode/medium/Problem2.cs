@@ -10,30 +10,47 @@ namespace online_judge.leetcode.medium
     {
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            double digit1 = Traverse(l1);
-            double digit2 = Traverse(l2);
-            double result = digit1 + digit2;
+            ulong digit1 = Traverse(l1);
+            ulong digit2 = Traverse(l2);
+            ulong result = digit1 + digit2;
 
             ListNode ret = null;
-            while (result > 10)
+            while (result >= 10)
             {
-                ListNode node = new ListNode((int)result % 10, ret);
+                ulong val = result % 10;
+                ListNode node = new ListNode((int)val, ret);
                 
                 result = result / 10;
                 ret = node;
             }
-            ListNode last = new ListNode((int)result % 10, ret);
+            ListNode last = new ListNode((int)result, ret);
 
-            return last;
+            ListNode reverseTail = last, reverse = null;
+            ListNode prev = null;
+            while (reverseTail != null)
+            {
+                ListNode node = new ListNode(reverseTail.val, prev);
+                prev = node;
+                reverseTail = reverseTail.next;
+
+                if (reverseTail == null)
+                {
+                    reverse = node;
+                    break;
+                }
+            }
+
+
+            return reverse;
         }
 
-        private double Traverse(ListNode node)
+        private ulong Traverse(ListNode node)
         {
-            double ret = 0;
+            ulong ret = 0;
             int tens = 0;
             while(node != null)
             {
-                ret += node.val * Math.Pow(10, tens++);
+                ret += (ulong)node.val * (ulong)Math.Pow(10, tens++);
                 node = node.next;
             }
 
