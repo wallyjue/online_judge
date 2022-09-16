@@ -20,18 +20,11 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem252();
-			var medium = new online_judge.leetcode.medium.Problem253();
+			var medium = new online_judge.leetcode.medium.Problem2();
 			var hard = new online_judge.leetcode.hard.Problem2402();
 			var explore = new online_judge.leetcode.explore.RecursionII();
             
-			hard.MostBooked(4, new int[][] { new int[] { 18, 19 }, new int[] { 3,12 }, new int[] { 17,19 }, new int[] { 2,13 }, new int[] { 7, 10} });
-            hard.MostBooked(2, new int[][] { new int[] { 0, 10 }, new int[] { 1,5 }, new int[] { 2,7 }, new int[] { 3,4 } });
-            hard.MostBooked(3, new int[][] { new int[] { 1,20 }, new int[] { 2,10 }, new int[] { 3,5 }, new int[] { 4,9 }, new int[] { 6,8 } });
-            //medium.MinMeetingRooms(new int[][] { new int[] { 2, 10 }, new int[] { 4,10 }, new int[] { 10,20 }, new int[] { 10, 30 } });
-            //medium.MinMeetingRooms(new int[][] { new int[] { 0, 30 }, new int[] { 5, 10 }, new int[] { 15, 20 } });
-            //medium.MinMeetingRooms(new int[][] { new int[] { 7, 10 }, new int[] { 2, 4 }});
-
-
+			
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
@@ -114,16 +107,17 @@ namespace online_judge
 
 			//ListNode node7 = new ListNode(6, null);
 			
-            ListNode listnode6 = new ListNode(6, null);
+            ListNode listnode6 = new ListNode(4, null);
 
-			ListNode listnode5 = new ListNode(5, listnode6);
-			ListNode listnode4 = new ListNode(4, listnode5);
-			ListNode listnode3 = new ListNode(3, listnode4);
+			ListNode listnode5 = new ListNode(6, listnode6);
+			ListNode listnode4 = new ListNode(5, listnode5);
 
-			ListNode listnode2 = new ListNode(2, listnode3);
-            ListNode listnode1 = new ListNode(1, listnode2);
-            ListNode head = new ListNode(0, listnode1);
+			ListNode listnode3 = new ListNode(3, null);
 
+			ListNode listnode2 = new ListNode(4, listnode3);
+            ListNode listnode1 = new ListNode(2, listnode2);
+            //ListNode head = new ListNode(0, listnode1);
+			medium.AddTwoNumbers(listnode1, listnode4);
             //var ret = medium.LengthOfLongestSubstring2("bbbbb");
             //var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
             //ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
