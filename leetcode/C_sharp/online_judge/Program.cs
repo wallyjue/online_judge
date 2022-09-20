@@ -90,27 +90,28 @@ namespace online_judge
 			TreeNode root = new TreeNode(1, treenode1, treenode2);
 
 
-			//[3,9,20,null,null,15,7]
+            //[3,9,20,null,null,15,7]
 
-			//Node node6 = new Node(6, null, null, null);
-
-
+            //Node node6 = new Node(6, null, null, null);
 
 
 
-			//var ret = medium.MinSubArrayLen( 11, new int[] { 1, 2, 3, 4, 5 });
 
-			// [[1,4,5],[1,3,4],[2,6]]
 
-			//ListNode node9 = new ListNode(10, null);
-			//ListNode node8 = new ListNode(9, node9);
+            //var ret = medium.MinSubArrayLen( 11, new int[] { 1, 2, 3, 4, 5 });
 
-			//ListNode node7 = new ListNode(6, null);
-			
-            ListNode listnode6 = new ListNode(4, null);
+            // [[1,4,5],[1,3,4],[2,6]]
 
-			ListNode listnode5 = new ListNode(6, listnode6);
-			ListNode listnode4 = new ListNode(5, listnode5);
+            //ListNode node9 = new ListNode(10, null);
+            //ListNode node8 = new ListNode(9, node9);
+
+            //ListNode node7 = new ListNode(6, null);
+
+            ListNode listnode61 = new ListNode(9, null);
+            ListNode listnode6 = new ListNode(9, listnode61);
+
+			ListNode listnode5 = new ListNode(9, listnode6);
+			ListNode listnode4 = new ListNode(9, listnode5);
 
             // [1,0,0,0,0,   0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0   ,0,0,0,0,0,1]
             // [5,6,4]
@@ -125,14 +126,14 @@ namespace online_judge
             ListNode listnode18 = new ListNode(0, listnode19);
             ListNode listnode17 = new ListNode(0, listnode18);
             ListNode listnode16 = new ListNode(0, listnode17);
-            ListNode listnode15 = new ListNode(0, listnode16);
-            ListNode listnode14 = new ListNode(0, listnode15);
-            ListNode listnode13 = new ListNode(0, listnode14);
-            ListNode listnode12 = new ListNode(0, listnode13);
+            ListNode listnode15 = new ListNode(9, null);
+            ListNode listnode14 = new ListNode(9, listnode15);
+            ListNode listnode13 = new ListNode(9, listnode14);
+            ListNode listnode12 = new ListNode(9, listnode13);
 
-            ListNode listnode11 = new ListNode(0, listnode12);
-            ListNode listnode2 = new ListNode(0, listnode11);
-            ListNode listnode1 = new ListNode(1, listnode2);
+            ListNode listnode11 = new ListNode(9, listnode12);
+            ListNode listnode2 = new ListNode(9, listnode11);
+            ListNode listnode1 = new ListNode(9, listnode2);
             //ListNode head = new ListNode(0, listnode1);
 			medium.AddTwoNumbers(listnode1, listnode4);
             //var ret = medium.LengthOfLongestSubstring2("bbbbb");

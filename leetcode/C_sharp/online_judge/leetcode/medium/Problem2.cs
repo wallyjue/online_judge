@@ -10,48 +10,49 @@ namespace online_judge.leetcode.medium
     {
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            ulong digit1 = Traverse(l1);
-            ulong digit2 = Traverse(l2);
-            ulong result = digit1 + digit2;
-
-            ListNode ret = null;
-            while (result >= 10)
+            ListNode ret = null, runner = null, prev = null;
+            int carry = 0;
+            while (l1 != null || l2 != null)
             {
-                ulong val = result % 10;
-                ListNode node = new ListNode((int)val, ret);
-                
-                result = result / 10;
-                ret = node;
-            }
-            ListNode last = new ListNode((int)result, ret);
-
-            ListNode reverseTail = last, reverse = null;
-            ListNode prev = null;
-            while (reverseTail != null)
-            {
-                ListNode node = new ListNode(reverseTail.val, prev);
-                prev = node;
-                reverseTail = reverseTail.next;
-
-                if (reverseTail == null)
+                int sum = carry;
+                if (l1 != null)
                 {
-                    reverse = node;
-                    break;
+                    sum += l1.val;
+                    l1 = l1.next;
+                }
+
+                if (l2 != null)
+                {
+                    sum += l2.val;
+                    l2 = l2.next;
+                }
+
+                if (sum >= 10)
+                {
+                    carry = 1;
+                    sum = sum % 10;
+                }
+                else carry = 0;
+                runner = new ListNode(sum);
+                if (prev != null)
+                {
+                    prev.next = runner;
+                }
+                
+                prev = runner;
+                if (ret == null)
+                {
+                    ret = runner;
                 }
             }
 
-
-            return reverse;
-        }
-
-        private ulong Traverse(ListNode node)
-        {
-            ulong ret = 0;
-            int tens = 0;
-            while(node != null)
+            if (carry > 0)
             {
-                ret += (ulong)node.val * (ulong)Math.Pow(10, tens++);
-                node = node.next;
+                runner = new ListNode(carry);
+                if (prev != null)
+                {
+                    prev.next = runner;
+                }
             }
 
             return ret;
