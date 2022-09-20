@@ -11,7 +11,6 @@ namespace online_judge.leetcode.medium
     {
         public int[] TopKFrequent(int[] nums, int k)
         {
-            int[] ret = null;
             PriorityQueue<int, int> pq = new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x));
 
             Dictionary<int, int> table = new Dictionary<int, int>();
@@ -41,7 +40,7 @@ namespace online_judge.leetcode.medium
                 theresult.Add(pq.Dequeue());
             }
 
-            return ret;
+            return theresult.ToArray();
         }
     }
 }

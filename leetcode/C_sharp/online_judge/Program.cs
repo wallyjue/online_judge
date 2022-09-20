@@ -20,11 +20,15 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem252();
-			var medium = new online_judge.leetcode.medium.Problem2();
+			var medium = new online_judge.leetcode.medium.Problem347();
 			var hard = new online_judge.leetcode.hard.Problem2402();
 			var explore = new online_judge.leetcode.explore.RecursionII();
-            
-			
+
+
+
+			medium.TopKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2);
+            medium.TopKFrequent(new int[] { 1 }, 1);
+
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
             //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
@@ -135,7 +139,7 @@ namespace online_judge
             ListNode listnode2 = new ListNode(9, listnode11);
             ListNode listnode1 = new ListNode(9, listnode2);
             //ListNode head = new ListNode(0, listnode1);
-			medium.AddTwoNumbers(listnode1, listnode4);
+			
             //var ret = medium.LengthOfLongestSubstring2("bbbbb");
             //var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
             //ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
