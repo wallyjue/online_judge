@@ -12,9 +12,7 @@ namespace online_judge.leetcode.medium
         public int[][] KClosest(int[][] points, int k)
         {
             int[][] ret = new int[k][];
-            //PriorityQueue<int, int> pq = new PriorityQueue<int, int>(Comparer<int>.Create((x, y) => y - x));
             List<double[]> pq = new List<double[]>();
-            // <index, distance>
 
             for (int cnt = 0; cnt < points.Length; cnt++)
             {
@@ -22,7 +20,6 @@ namespace online_judge.leetcode.medium
                 double[] item = new double[2] { cnt, distance};
                 pq.Add(item);
             }
-
             pq.Sort(this.Compare);
             List<int[]> result = new List<int[]>();
             for (int cnt = 0; cnt < k;cnt++)
@@ -31,7 +28,7 @@ namespace online_judge.leetcode.medium
                 result.Add(new int[] { point[0], point[1] });
             }
 
-            return ret;
+            return result.ToArray();
         }
 
         private int Compare(double[] a, double[] b)
