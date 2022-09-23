@@ -20,27 +20,10 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem252();
-			var medium = new online_judge.leetcode.medium.Problem973();
+			var medium = new online_judge.leetcode.medium.Problem328();
 			var hard = new online_judge.leetcode.hard.Problem2402();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-
-
-			medium.KClosest(new int[][] {
-					new int [] {1,3 },
-					new int [] {-2,2}
-				}, 1);
-            medium.KClosest(new int[][] {
-                    new int [] {3,3 },
-                    new int [] {5,-1 },
-                    new int [] {-2,4}
-                }, 1);
-
-            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a');
-            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'c');
-            //easy.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd');
-            //medium.FourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0);
-            //medium.FindMin2(new int[] { 3, 4, 5, 1, 2 });
             /*
             var ret = medium.GetMinIndex2(new List<int> { 1 }, 3);
 
@@ -48,8 +31,6 @@ namespace online_judge
             ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 2);
             ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 3);
             ret = medium.GetMinIndex2(new List<int> { 1, 2, 2, 3, 5 }, 5);
-
-
             ret = medium.GetMinIndex2(new List<int> { 1, 4 }, 3);
             ret = medium.GetMinIndex2(new List<int> { 1, 4 }, 5);
             ret = medium.GetMinIndex2(new List<int> { 1, 4, 5 }, 4);
@@ -137,21 +118,19 @@ namespace online_judge
             ListNode listnode18 = new ListNode(0, listnode19);
             ListNode listnode17 = new ListNode(0, listnode18);
             ListNode listnode16 = new ListNode(0, listnode17);
-            ListNode listnode15 = new ListNode(9, null);
-            ListNode listnode14 = new ListNode(9, listnode15);
-            ListNode listnode13 = new ListNode(9, listnode14);
-            ListNode listnode12 = new ListNode(9, listnode13);
 
-            ListNode listnode11 = new ListNode(9, listnode12);
-            ListNode listnode2 = new ListNode(9, listnode11);
-            ListNode listnode1 = new ListNode(9, listnode2);
-            //ListNode head = new ListNode(0, listnode1);
+            ListNode listnode15 = new ListNode(8, null);
+            ListNode listnode14 = new ListNode(7, listnode15);
+            ListNode listnode13 = new ListNode(6, listnode14);
+            ListNode listnode12 = new ListNode(5, null);
+
+            ListNode listnode11 = new ListNode(4, listnode12);
+            ListNode listnode2 = new ListNode(3, listnode11);
+            ListNode listnode1 = new ListNode(2, listnode2);
+            ListNode head = new ListNode(1, listnode1);
+			medium.OddEvenList(head);
+            //
 			
-            //var ret = medium.LengthOfLongestSubstring2("bbbbb");
-            //var ret = easy.LongestCommonPrefix(new string[] { "baac", "acb", "bacc", "cb"});
-            //ret = easy.LongestCommonPrefix(new string[] { "flow", "flower", "flight" });
-            //ret = easy.LongestCommonPrefix(new string[] { "do", "racecar", "car" });
-            //ret = easy.LongestCommonPrefix(new string[] { "abc", "ab", "a" });
             /*
 			var ret = medium.Exist(new char[][] { 
 				new char[] { 'A', 'A' },
