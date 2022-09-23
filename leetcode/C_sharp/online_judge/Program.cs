@@ -1,5 +1,6 @@
 ﻿using online_judge.leetcode;
 using online_judge.leetcode.easy;
+using online_judge.leetcode.hard;
 using online_judge.leetcode.medium;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,24 @@ namespace online_judge
 
 			var easy = new online_judge.leetcode.easy.Problem252();
 			var medium = new online_judge.leetcode.medium.Problem328();
-			var hard = new online_judge.leetcode.hard.Problem2402();
+			var hard = new online_judge.leetcode.hard.MedianFinder();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+
+            /*
+			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
+[[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
+			 */
+            hard.AddNum(-1);    // arr = [1]
+            var temp1 = hard.FindMedian(); // return 1.5 (i.e., (1 + 2) / 2)
+            hard.AddNum(-2);    // arr = [1, 2]
+            temp1 = hard.FindMedian(); // return 1.5 (i.e., (1 + 2) / 2)
+            hard.AddNum(-3);    // arr[1, 2, 3]
+            temp1 = hard.FindMedian();
+            hard.AddNum(-4);    // arr[1, 2, 3]
+            temp1 = hard.FindMedian();
+            hard.AddNum(-5);    // arr[1, 2, 3]
+            temp1 = hard.FindMedian();
             /*
             var ret = medium.GetMinIndex2(new List<int> { 1 }, 3);
 
