@@ -80,7 +80,6 @@ namespace online_judge.leetcode.hard
 
         public void AddNum(int num)
         {
-            //int max = firsthalf.Count > 0 ? firsthalf.Peek() : int.MinValue;
             int min = secondhalf.Count > 0 ? secondhalf.Peek() : int.MaxValue;
 
             if (num > min)
