@@ -20,21 +20,22 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem252();
+			var easy = new online_judge.leetcode.easy.Problem20();
 			var medium = new online_judge.leetcode.medium.Problem328();
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+			easy.IsValid("{()}");
 
+            easy.IsValid("()[]{}");
+
+            easy.IsValid("(]");
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
 			 */
 
-            hard.MedianSlidingWindow(new int[] { 2147483647, 2147483647 }, 2);
-            hard.MedianSlidingWindow(new int[] { 1, 1,1,1,1,1,1,1,1,1 }, 4);
-            hard.MedianSlidingWindow(new int[] { 1, 3, -1, -3, 5, 3, 6, 7 }, 3);
-            hard.MedianSlidingWindow(new int[] { 1, 2, 3, 4, 2, 3, 1, 4, 2 }, 3);
+
             /*
             var ret = medium.GetMinIndex2(new List<int> { 1 }, 3);
 
