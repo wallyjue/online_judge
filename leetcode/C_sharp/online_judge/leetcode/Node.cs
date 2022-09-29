@@ -10,6 +10,8 @@
         public Node prev;
         public Node child;
 
+        public Node random;
+
         public Node() { }
 
         public Node(int _val)

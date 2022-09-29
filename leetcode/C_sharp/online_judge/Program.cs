@@ -21,7 +21,7 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem20();
-			var medium = new online_judge.leetcode.medium.Problem430();
+			var medium = new online_judge.leetcode.medium.Problem138();
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -73,11 +73,28 @@ namespace online_judge
             //Node node7 = new Node(7, null, null, null);
 			//Node node6 = new Node(15, null, null, null);
 			//Node node5 = new Node(5, null, null, null);
-			//Node node4 = new Node(4, null, null, null);
-			Node node3 = new Node(3);
-			Node node2 = new Node(2, null, null, node3, null);
-			Node node1 = new Node(1, null, null, node2, null);
-			medium.Flatten(node1);
+			Node node4 = new Node(1);
+			Node node3 = new Node(10);
+			Node node2 = new Node(11);
+			Node node1 = new Node(13);
+			Node head = new Node(7);
+
+			head.next = node1;
+			head.random = null;
+
+			node1.next = node2;
+			node1.random = head;
+
+			node2.next = node3;
+			node2.random = node4;
+
+			node3.next = node4;
+			node3.random = node2;
+
+			node4.next = null;
+			node4.random = head;
+
+            medium.CopyRandomList(head);
 
 
             TreeNode treenode6 = new TreeNode(7);
@@ -134,7 +151,7 @@ namespace online_judge
             ListNode listnode11 = new ListNode(4, listnode12);
             ListNode listnode2 = new ListNode(3, listnode11);
             ListNode listnode1 = new ListNode(2, listnode2);
-            ListNode head = new ListNode(1, listnode1);
+            ListNode listhead = new ListNode(1, listnode1);
 			
             //
 			
