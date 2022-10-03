@@ -20,7 +20,7 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem20();
+			var easy = new online_judge.leetcode.easy.Problem637();
 			var medium = new online_judge.leetcode.medium.Problem314();
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
@@ -84,7 +84,7 @@ namespace online_judge
 			TreeNode treenode1 = new TreeNode(9);
 			TreeNode root = new TreeNode(3, treenode1, treenode2);
 
-			medium.VerticalOrder(root);
+            easy.AverageOfLevels(root);
             //[3,9,20,null,null,15,7]
 
             //Node node6 = new Node(6, null, null, null);
