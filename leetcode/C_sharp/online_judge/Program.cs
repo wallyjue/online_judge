@@ -21,7 +21,7 @@ namespace online_judge
 			*/
 
 			var easy = new online_judge.leetcode.easy.Problem20();
-			var medium = new online_judge.leetcode.medium.Problem138();
+			var medium = new online_judge.leetcode.medium.Problem314();
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
@@ -73,39 +73,18 @@ namespace online_judge
             //Node node7 = new Node(7, null, null, null);
 			//Node node6 = new Node(15, null, null, null);
 			//Node node5 = new Node(5, null, null, null);
-			Node node4 = new Node(1);
-			Node node3 = new Node(10);
-			Node node2 = new Node(11);
-			Node node1 = new Node(13);
-			Node head = new Node(7);
-
-			head.next = node1;
-			head.random = null;
-
-			node1.next = node2;
-			node1.random = head;
-
-			node2.next = node3;
-			node2.random = node4;
-
-			node3.next = node4;
-			node3.random = node2;
-
-			node4.next = null;
-			node4.random = head;
-
-            medium.CopyRandomList(head);
+			
 
 
-            TreeNode treenode6 = new TreeNode(7);
-			TreeNode treenode5 = new TreeNode(6);
-			TreeNode treenode4 = new TreeNode(5);
-			TreeNode treenode3 = new TreeNode(4);
-			TreeNode treenode2 = new TreeNode(3, treenode5, treenode6);
-			TreeNode treenode1 = new TreeNode(2, treenode3, treenode4);
-			TreeNode root = new TreeNode(1, treenode1, treenode2);
+            //TreeNode treenode6 = new TreeNode(7);
+			//TreeNode treenode5 = new TreeNode(6);
+			TreeNode treenode4 = new TreeNode(7);
+			TreeNode treenode3 = new TreeNode(15);
+			TreeNode treenode2 = new TreeNode(20, treenode3, treenode4);
+			TreeNode treenode1 = new TreeNode(9);
+			TreeNode root = new TreeNode(3, treenode1, treenode2);
 
-
+			medium.VerticalOrder(root);
             //[3,9,20,null,null,15,7]
 
             //Node node6 = new Node(6, null, null, null);
