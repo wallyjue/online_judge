@@ -18,7 +18,6 @@ namespace online_judge.leetcode.medium
                 return null;
             }
 
-            Node ret = null;
             Node runner = head;
 
             // Creating the new head node.

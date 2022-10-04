@@ -20,7 +20,7 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem637();
+			var easy = new online_judge.leetcode.easy.Problem112();
 			var medium = new online_judge.leetcode.medium.Problem314();
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
@@ -69,22 +69,26 @@ namespace online_judge
 			medium.WordBreak("applepenapple", new List<string> { "apple", "pen" });
 			medium.WordBreak("catsandog", new List<string> { "cats", "dog", "sand", "and", "cat" });
 			*/
-            
+
             //Node node7 = new Node(7, null, null, null);
-			//Node node6 = new Node(15, null, null, null);
-			//Node node5 = new Node(5, null, null, null);
-			
+            //Node node6 = new Node(15, null, null, null);
+            //Node node5 = new Node(5, null, null, null);
+
 
 
             //TreeNode treenode6 = new TreeNode(7);
-			//TreeNode treenode5 = new TreeNode(6);
-			TreeNode treenode4 = new TreeNode(7);
-			TreeNode treenode3 = new TreeNode(15);
-			TreeNode treenode2 = new TreeNode(20, treenode3, treenode4);
-			TreeNode treenode1 = new TreeNode(9);
-			TreeNode root = new TreeNode(3, treenode1, treenode2);
+            //TreeNode treenode5 = new TreeNode(6);
+            TreeNode treenode8 = new TreeNode(1);
+            TreeNode treenode7 = new TreeNode(2);
+            TreeNode treenode6 = new TreeNode(7);
+            TreeNode treenode5 = new TreeNode(4, null, treenode8);
+            TreeNode treenode4 = new TreeNode(13);
+			TreeNode treenode3 = new TreeNode(11, treenode6, treenode7);
+			TreeNode treenode2 = new TreeNode(8, treenode4, treenode5);
+			TreeNode treenode1 = new TreeNode(4, treenode3, null);
+			TreeNode root = new TreeNode(5, treenode1, treenode2);
 
-            easy.AverageOfLevels(root);
+            easy.HasPathSum(root, 22);
             //[3,9,20,null,null,15,7]
 
             //Node node6 = new Node(6, null, null, null);
