@@ -22,14 +22,12 @@ namespace online_judge
 
 
 			var easy = new online_judge.leetcode.easy.Problem1137();
-			var medium = new online_judge.leetcode.medium.Problem300();
+			var medium = new online_judge.leetcode.medium.Problem740();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            easy.Tribonacci(3);
-            easy.Tribonacci(4);
-            easy.Tribonacci(5);
+            medium.DeleteAndEarn(new int[] { 3, 4, 2});
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
