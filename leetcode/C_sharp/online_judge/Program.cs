@@ -21,13 +21,14 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem637();
+			var easy = new online_judge.leetcode.easy.Problem746();
 			var medium = new online_judge.leetcode.medium.Problem300();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-
+            easy.MinCostClimbingStairs(new int[] { 10, 15, 20 });
+            easy.MinCostClimbingStairs(new int[] { 1, 100, 1, 1, 1, 100, 1, 1, 100, 1 });
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
