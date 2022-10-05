@@ -20,10 +20,13 @@ namespace online_judge
 				}
 			*/
 
-			var easy = new online_judge.leetcode.easy.Problem112();
-			var medium = new online_judge.leetcode.medium.Problem314();
+
+			var easy = new online_judge.leetcode.easy.Problem637();
+			var medium = new online_judge.leetcode.medium.Problem300();
+
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
+
 
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
@@ -77,6 +80,7 @@ namespace online_judge
 
 
             //TreeNode treenode6 = new TreeNode(7);
+
             //TreeNode treenode5 = new TreeNode(6);
             TreeNode treenode8 = new TreeNode(1);
             TreeNode treenode7 = new TreeNode(2);
@@ -88,7 +92,8 @@ namespace online_judge
 			TreeNode treenode1 = new TreeNode(4, treenode3, null);
 			TreeNode root = new TreeNode(5, treenode1, treenode2);
 
-            easy.HasPathSum(root, 22);
+
+			//TreeNode treenode5 = new TreeNode(6);
             //[3,9,20,null,null,15,7]
 
             //Node node6 = new Node(6, null, null, null);
