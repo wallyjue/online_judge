@@ -21,12 +21,15 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem1137();
+			var easy = new online_judge.leetcode.easy.Problem392();
 			var medium = new online_judge.leetcode.medium.Problem740();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
+            easy.IsSubsequence("acb", "ahbgdc");
+            easy.IsSubsequence("abc", "ahbgdc");
+            easy.IsSubsequence("axc", "ahbgdc");
             medium.DeleteAndEarn(new int[] { 3, 4, 2});
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
