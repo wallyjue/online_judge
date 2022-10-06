@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Versioning;
 using System.Text;
@@ -34,6 +35,7 @@ namespace online_judge.leetcode.medium
             int mapIndex = 1;
             dp[0] = 0;
             KeyValuePair<int, int> prev = new KeyValuePair<int, int>();
+            int max = int.MinValue;
             foreach (var item in maps)
             {
                 if (mapIndex == 1)
@@ -45,10 +47,10 @@ namespace online_judge.leetcode.medium
                 {
                     if (item.Key - 1 > prev.Key)
                     {
-                        dp[mapIndex] = item.Value + prev.Value;
+                        dp[mapIndex] = item.Value + max;
                         picked.Add(item.Key, true);
                     }
-                    else if (!picked.ContainsKey(item.Key) && dp[mapIndex - 1] < item.Value + dp[mapIndex - 2])
+                    else if (dp[mapIndex - 1] < item.Value + dp[mapIndex - 2])
                     {
                         dp[mapIndex] = item.Value + dp[mapIndex - 2];
                         picked.Add(item.Key, true);
@@ -59,6 +61,7 @@ namespace online_judge.leetcode.medium
                     }
                 }
                 prev = item;
+                max = Math.Max(max, dp[mapIndex]);
                 mapIndex++;
             }
 
