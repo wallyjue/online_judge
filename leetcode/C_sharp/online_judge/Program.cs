@@ -27,10 +27,9 @@ namespace online_judge
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            easy.IsSubsequence("acb", "ahbgdc");
-            easy.IsSubsequence("abc", "ahbgdc");
-            easy.IsSubsequence("axc", "ahbgdc");
-            medium.DeleteAndEarn(new int[] { 3, 4, 2});
+            medium.DeleteAndEarn(new int[] { 8, 10, 4, 9, 1, 3, 5, 9, 4, 10});
+
+            medium.DeleteAndEarn(new int[] { 2, 2, 3, 3, 3, 4 });
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]

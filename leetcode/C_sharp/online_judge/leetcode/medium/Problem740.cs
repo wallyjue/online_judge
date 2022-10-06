@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,16 +11,58 @@ namespace online_judge.leetcode.medium
     internal class Problem740
     {
         // dynamic function
-        
+        // dp(n) = Math.Max( dp(n - 2) + maps[n], dp(n-1))
         public int DeleteAndEarn(int[] nums)
         {
-            int[] map = new int[10000];
+            Array.Sort(nums);
+            int[] dp = new int[nums.Length + 1];
+            Dictionary<int, int> maps = new Dictionary<int, int>();
             for (int cnt = 0;cnt < nums.Length;cnt++)
             {
-                map[nums[cnt]] += nums[cnt];
+                if (maps.ContainsKey(nums[cnt]))
+                {
+                    int value = maps[nums[cnt]];
+                    maps.Remove(nums[cnt]);
+                    maps.Add(nums[cnt], value + nums[cnt]);
+                }
+                else
+                {
+                    maps.Add(nums[cnt], nums[cnt]);
+                }
+            }
+            Hashtable picked = new Hashtable();
+            int mapIndex = 1;
+            dp[0] = 0;
+            KeyValuePair<int, int> prev = new KeyValuePair<int, int>();
+            foreach (var item in maps)
+            {
+                if (mapIndex == 1)
+                {
+                    dp[mapIndex] = item.Value;
+                    picked.Add(item.Key, true);
+                }
+                else
+                {
+                    if (item.Key - 1 > prev.Key)
+                    {
+                        dp[mapIndex] = item.Value + prev.Value;
+                        picked.Add(item.Key, true);
+                    }
+                    else if (!picked.ContainsKey(item.Key) && dp[mapIndex - 1] < item.Value + dp[mapIndex - 2])
+                    {
+                        dp[mapIndex] = item.Value + dp[mapIndex - 2];
+                        picked.Add(item.Key, true);
+                    }
+                    else
+                    {
+                        dp[mapIndex] = dp[mapIndex - 1];
+                    }
+                }
+                prev = item;
+                mapIndex++;
             }
 
-            return 0;
+            return dp[maps.Count];
         }
     }
 }
