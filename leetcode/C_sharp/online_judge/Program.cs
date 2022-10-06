@@ -21,15 +21,14 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem392();
+			var easy = new online_judge.leetcode.easy.Problem121();
 			var medium = new online_judge.leetcode.medium.Problem740();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            medium.DeleteAndEarn(new int[] { 8, 10, 4, 9, 1, 3, 5, 9, 4, 10});
-
-            medium.DeleteAndEarn(new int[] { 2, 2, 3, 3, 3, 4 });
+            easy.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
+            easy.MaxProfit(new int[] { 7, 6, 4, 3, 1 });
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
