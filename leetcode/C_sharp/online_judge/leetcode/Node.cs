@@ -1,4 +1,6 @@
-﻿namespace online_judge.leetcode
+﻿using System.Collections.Generic;
+
+namespace online_judge.leetcode
 {
     public class Node
     {
@@ -11,6 +13,8 @@
         public Node child;
 
         public Node random;
+
+        public IList<Node> children;
 
         public Node() { }
 
@@ -33,6 +37,12 @@
             prev = _prev;
             next = _next;
             child = _child;
+        }
+
+        public Node(int _val, IList<Node> _children)
+        {
+            val = _val;
+            children = _children;
         }
     }
 }
