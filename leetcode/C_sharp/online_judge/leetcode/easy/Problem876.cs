@@ -11,8 +11,8 @@ namespace online_judge.leetcode.easy
         public ListNode MiddleNode(ListNode head)
         {
             int length = GetLength(head);
-            int move = length % 2 == 0 ? (length / 2) + 1 : (length / 2);
-            while(move > 0)
+            int move = length % 2 == 0 ? (length / 2) : (length / 2) + 1;
+            while (move > 0)
             {
                 head = head.next;
                 move--;
@@ -24,7 +24,7 @@ namespace online_judge.leetcode.easy
         {
             int length = 0;
             ListNode node = head;
-            while(node.next != null)
+            while (node.next != null)
             {
                 node = node.next;
                 length++;
