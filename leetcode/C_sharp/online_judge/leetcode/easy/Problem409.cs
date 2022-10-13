@@ -13,7 +13,7 @@ namespace online_judge.leetcode.easy
         {
             int ret = 0;
             Hashtable map = new Hashtable();
-            for (int cnt = 0; cnt < s.Length;cnt++)
+            for (int cnt = 0; cnt < s.Length; cnt++)
             {
                 if (map.ContainsKey(s[cnt]))
                 {
