@@ -22,17 +22,13 @@ namespace online_judge
 
 
 			var easy = new online_judge.leetcode.easy.Problem733();
-			var medium = new online_judge.leetcode.medium.Problem740();
+			var medium = new online_judge.leetcode.medium.Problem62();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            easy.FloodFill(new int[][] {
-                    new int [] {1, 1, 1, 0 },
-                    new int [] {1, 1, 1, 0 },
-                    new int [] {1, 1, 1, 0 },
-                    new int [] {0, 0, 0, 1 }
-                }, 1,1,2);
+            medium.UniquePaths(3, 7);
+            medium.UniquePaths(3, 2);
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
