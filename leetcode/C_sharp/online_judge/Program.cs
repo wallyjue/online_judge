@@ -21,14 +21,18 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem121();
+			var easy = new online_judge.leetcode.easy.Problem409();
 			var medium = new online_judge.leetcode.medium.Problem740();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            easy.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
-            easy.MaxProfit(new int[] { 7, 6, 4, 3, 1 });
+            easy.LongestPalindrome("bb");
+            easy.LongestPalindrome("bbdd");
+
+            easy.LongestPalindrome("abccccdd");
+            easy.LongestPalindrome("a");
+            easy.LongestPalindrome("abcdefg");
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
