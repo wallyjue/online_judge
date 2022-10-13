@@ -22,13 +22,12 @@ namespace online_judge
 
 
 			var easy = new online_judge.leetcode.easy.Problem733();
-			var medium = new online_judge.leetcode.medium.Problem438();
+			var medium = new online_judge.leetcode.medium.Problem299();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
-            medium.FindAnagrams("aaaaaaaaaa", "aaaaaaaaaaaaa");
-            medium.FindAnagrams("cbaebabacd", "abc");
-            medium.FindAnagrams("abab", "ab");
+            medium.GetHint("1122", "1222"); 
+            medium.GetHint("1123", "0111");
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
