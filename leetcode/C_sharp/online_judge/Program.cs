@@ -22,14 +22,13 @@ namespace online_judge
 
 
 			var easy = new online_judge.leetcode.easy.Problem844();
-			var medium = new online_judge.leetcode.medium.Problem394();
+			var medium = new online_judge.leetcode.medium.Problem692();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            medium.DecodeString("100[leetcode]");
-            medium.DecodeString("3[a2[c]]");
-            medium.DecodeString("2[abc]3[cd]ef");
+            medium.TopKFrequent(new string[] { "i", "love", "leetcode", "i", "love", "coding"}, 2);
+            
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
