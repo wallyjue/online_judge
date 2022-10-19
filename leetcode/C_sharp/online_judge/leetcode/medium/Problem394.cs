@@ -10,59 +10,47 @@ namespace online_judge.leetcode.medium
     {
         public string DecodeString(string s)
         {
-            Stack<char> stack = new Stack<char>();
-            bool isInString = false;
+            LinkedList<char> stack = new LinkedList<char>();
             StringBuilder ret = new StringBuilder();
             for (int cnt = 0; cnt < s.Length; cnt++)
             {
-                if (!isInString && s[cnt] >= 'a' && s[cnt] <= 'z')
+                if (s[cnt] != ']')
                 {
-                    ret.Append(s[cnt]);
-                }
-                else if (s[cnt] != ']')
-                {
-                    stack.Push(s[cnt]);
-                    isInString = true;
+                    stack.AddLast(s[cnt]);
                 }
                 else
                 {
-                    isInString = false;
-                    StringBuilder sb = new StringBuilder();
-                    int rep = 0;
-                    var cc = stack.Peek();
-                    while (stack.Count > 0 && stack.Peek() > '9')
+                    StringBuilder temp = new StringBuilder();
+                    while (stack.Count > 0 && stack.Last() != '[')
                     {
-                        char c = stack.Pop();
-                        if (c != '[')
-                        {
-                            sb.Append(c);
-                        }
+                        temp.Append(stack.Last());
+                        stack.RemoveLast();
+                    }
+                    stack.RemoveLast();
+                    double rep = 0;
+                    double power = 0;
+                    while(stack.Count >0 && stack.Last() <= '9')
+                    {
+                        rep += int.Parse(stack.Last().ToString()) * Math.Pow((double)10, power++);
+                        stack.RemoveLast();
                     }
 
-                    rep = int.Parse(stack.Pop().ToString());
-                    if (stack.Count == 0)
+                    for (int cnt2 = 0; cnt2 < rep; cnt2++)
                     {
-                        for (int cnt2 = 0; cnt2 < rep; cnt2++)
+                        //for(int cnt3 = temp.Length - 1; cnt3 >= 0;cnt3--)
+                        for (int cnt3 = 0; cnt3 < temp.Length; cnt3++)
                         {
-                            for (int cnt3 = sb.Length - 1; cnt3 >= 0; cnt3--)
-                            {
-                                ret.Append(sb[cnt3]);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int cnt2 = 0; cnt2 < rep; cnt2++)
-                        {
-                            for (int cnt3 = sb.Length - 1; cnt3 >= 0; cnt3--)
-                            {
-                                stack.Push(sb[cnt3]);
-                            }
+                            stack.AddLast(temp[cnt3]);
                         }
                     }
                 }
             }
-
+            while(stack.Count > 0)
+            {
+                ret.Append(stack.First().ToString());
+                stack.RemoveFirst();
+            }
+            
             return ret.ToString();
         }
     }

@@ -27,7 +27,7 @@ namespace online_judge
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
 
-            medium.DecodeString("abc3[cd]xyz");
+            medium.DecodeString("100[leetcode]");
             medium.DecodeString("3[a2[c]]");
             medium.DecodeString("2[abc]3[cd]ef");
             /*
