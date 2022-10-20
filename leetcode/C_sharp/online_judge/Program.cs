@@ -21,14 +21,17 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem844();
+			var easy = new online_judge.leetcode.easy.Problem896();
 			var medium = new online_judge.leetcode.medium.Problem692();
 
 			var hard = new online_judge.leetcode.hard.Problem480();
 			var explore = new online_judge.leetcode.explore.RecursionII();
+            easy.IsMonotonic(new int[] { 3,1,9 });
+            easy.IsMonotonic(new int[] { 5, 5, 5, 5, 2, 2, 2, 1, 1, 1, 0 });
+            easy.IsMonotonic(new int[] { 6, 5, 4, 4 });
+            easy.IsMonotonic(new int[] { 1, 1, 1 });
+            easy.IsMonotonic(new int[] { 1, 1, 1, 1 });
 
-            medium.TopKFrequent(new string[] { "i", "love", "leetcode", "i", "love", "coding"}, 2);
-            
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
