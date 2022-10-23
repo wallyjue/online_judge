@@ -10,9 +10,9 @@ namespace online_judge
 {
     class Program
     {
-		static void Main(string[] args)
-		{
-			/*
+        static void Main(string[] args)
+        {
+            /*
 				string[] lines = File.ReadAllLines(@"input.txt");
 				foreach (string line in lines)
 				{
@@ -21,13 +21,15 @@ namespace online_judge
 			*/
 
 
-			var easy = new online_judge.leetcode.easy.Problem896();
-			var medium = new online_judge.leetcode.medium.Problem28();
+            var easy = new online_judge.leetcode.easy.Problem2446();
+            var medium = new online_judge.leetcode.medium.Problem2447();
 
-			var hard = new online_judge.leetcode.hard.Problem480();
-			var explore = new online_judge.leetcode.explore.RecursionII();
-            medium.StrStr("abc", "c");
-            medium.StrStr("sadbutsad", "sad");
+            var hard = new online_judge.leetcode.hard.Problem480();
+            var explore = new online_judge.leetcode.explore.RecursionII();
+            medium.SubarrayGCD(new int[] { 9, 3, 1, 2, 6, 3 }, 3);
+            medium.SubarrayGCD(new int[] { 3, 12, 9, 6 }, 3);
+
+            medium.SubarrayGCD(new int[] { 4 }, 3);
 
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
@@ -83,6 +85,7 @@ namespace online_judge
             //TreeNode treenode6 = new TreeNode(7);
 
             //TreeNode treenode5 = new TreeNode(6);
+            /*
             TreeNode treenode8 = new TreeNode(1);
             TreeNode treenode7 = new TreeNode(2);
             TreeNode treenode6 = new TreeNode(7);
@@ -92,9 +95,9 @@ namespace online_judge
 			TreeNode treenode2 = new TreeNode(8, treenode4, treenode5);
 			TreeNode treenode1 = new TreeNode(4, treenode3, null);
 			TreeNode root = new TreeNode(5, treenode1, treenode2);
+            */
 
-
-			//TreeNode treenode5 = new TreeNode(6);
+            //TreeNode treenode5 = new TreeNode(6);
             //[3,9,20,null,null,15,7]
 
             //Node node6 = new Node(6, null, null, null);
@@ -111,7 +114,7 @@ namespace online_judge
             //ListNode node8 = new ListNode(9, node9);
 
             //ListNode node7 = new ListNode(6, null);
-
+            /*
             ListNode listnode61 = new ListNode(9, null);
             ListNode listnode6 = new ListNode(9, listnode61);
 
@@ -141,9 +144,9 @@ namespace online_judge
             ListNode listnode2 = new ListNode(3, listnode11);
             ListNode listnode1 = new ListNode(2, listnode2);
             ListNode listhead = new ListNode(1, listnode1);
-			
+			*/
             //
-			
+
             /*
 			var ret = medium.Exist(new char[][] { 
 				new char[] { 'A', 'A' },
@@ -199,7 +202,6 @@ namespace online_judge
 			ret = hard.Trap(new int[] { 4, 2, 0, 3, 2, 5 });
 			Console.WriteLine("ret:" + ret);
 			*/
-
         }
 	}
 }
