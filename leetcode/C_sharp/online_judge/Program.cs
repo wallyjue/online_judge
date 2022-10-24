@@ -22,12 +22,13 @@ namespace online_judge
 
 
             var easy = new online_judge.leetcode.easy.Problem2446();
-            var medium = new online_judge.leetcode.medium.Problem2447();
+            var medium = new online_judge.leetcode.medium.Problem1143();
 
             var hard = new online_judge.leetcode.hard.Problem1770();
             var explore = new online_judge.leetcode.explore.RecursionII();
-            hard.MaximumScore(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 });
-            hard.MaximumScore(new int[] { -5, -3, -3, -2, 7, 1 }, new int[] { -10, -5, 3, 4, 6 });
+            medium.LongestCommonSubsequence("abcde", "ace");
+            medium.LongestCommonSubsequence("abc", "abc");
+            medium.LongestCommonSubsequence("abc", "def");
 
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
