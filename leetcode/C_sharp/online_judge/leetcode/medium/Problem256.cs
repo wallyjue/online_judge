@@ -16,6 +16,26 @@ namespace online_judge.leetcode.medium
         //                         costs[n][color1] + Math.Min(f(n-1, color0),f(n-1, color2)),
         //                         costs[n][color2] + Math.Min(f(n-1, color0),f(n-1, color1)));
 
+        /*
+         * public int MinCost(int[][] costs)
+            {
+                for (int n = costs.Length - 2; n >= 0; n--)
+                {
+                    // Total cost of painting the nth house red.
+                    costs[n][0] += Math.Min(costs[n + 1][1], costs[n + 1][2]);
+                    // Total cost of painting the nth house green.
+                    costs[n][1] += Math.Min(costs[n + 1][0], costs[n + 1][2]);
+                    // Total cost of painting the nth house blue.
+                    costs[n][2] += Math.Min(costs[n + 1][0], costs[n + 1][1]);
+                }
+
+                if (costs.Length == 0) return 0;
+
+                return Math.Min(Math.Min(costs[0][0], costs[0][1]), costs[0][2]);
+            }
+
+        */
+
         int[] ret;
         int[][] costs;
         public int MinCost(int[][] costs)
