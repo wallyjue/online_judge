@@ -22,14 +22,14 @@ namespace online_judge
 
 
             var easy = new online_judge.leetcode.easy.Problem2446();
-            var medium = new online_judge.leetcode.medium.Problem1143();
+            var medium = new online_judge.leetcode.medium.Problem53();
 
             var hard = new online_judge.leetcode.hard.Problem1770();
             var explore = new online_judge.leetcode.explore.RecursionII();
-            medium.LongestCommonSubsequence("abcde", "ace");
-            medium.LongestCommonSubsequence("abc", "abc");
-            medium.LongestCommonSubsequence("abc", "def");
 
+            medium.MaxSubArray(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 });
+            medium.MaxSubArray(new int[] { 1 });
+            medium.MaxSubArray(new int[] { 5, 4, -1, 7, 8 });
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]

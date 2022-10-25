@@ -17,10 +17,10 @@ namespace online_judge.leetcode.medium
         int[][] result;
         public int LongestCommonSubsequence(string text1, string text2)
         {
-            result = new int[text1.Length][];
-            for (int cnt = 0; cnt < text1.Length;cnt++)
+            result = new int[text1.Length + 1][];
+            for (int cnt = 0; cnt < text1.Length + 1;cnt++)
             {
-                result[cnt] = new int[text2.Length]; 
+                result[cnt] = new int[text2.Length + 1]; 
             }
 
             int i = 1, j = 1;
