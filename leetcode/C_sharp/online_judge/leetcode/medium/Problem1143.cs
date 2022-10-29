@@ -23,30 +23,22 @@ namespace online_judge.leetcode.medium
                 result[cnt] = new int[text2.Length + 1]; 
             }
 
-            int i = 1, j = 1;
-            while (i <= text1.Length && j <= text2.Length)
+            for (int i = 1; i < text1.Length; i++)
             {
-                if (text1[i - 1] == text2[j - 1])
+                for (int j = 1; j < text2.Length; j++)
                 {
-                    result[i][j] = 1 + result[i - 1][j - 1];
-                    i++;
-                    j++;
-                }
-                else
-                {
-                    if (result[i][j - 1] > result[i - 1][j])
+                    if (text1[i - 1] == text2[j - 1])
                     {
-                        result[i][j] = result[i][j - 1];
-                        j++;
+                        result[i][j] = 1 + result[i - 1][j - 1];
                     }
                     else
                     {
-                        result[i][j] = result[i - 1][j];
-                        i++;
+                        result[i][j] = Math.Max(result[i - 1][j], result[i][j - 1]);
                     }
                 }
             }
 
+            
             return result[text1.Length][text2.Length];
         }
     }

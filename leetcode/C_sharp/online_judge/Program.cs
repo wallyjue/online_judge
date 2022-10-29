@@ -22,16 +22,21 @@ namespace online_judge
 
 
             var easy = new online_judge.leetcode.easy.Problem2446();
-            var medium = new online_judge.leetcode.medium.Problem256();
+            var medium = new online_judge.leetcode.medium.Problem1143();
 
             var hard = new online_judge.leetcode.hard.Problem265();
             var explore = new online_judge.leetcode.explore.RecursionII();
             // [[17, 2, 17], [8, 4, 10], [6, 3, 19], [4, 8, 12]]
+            medium.LongestCommonSubsequence("abcde", "ace");
+            medium.LongestCommonSubsequence("abc", "abc");
+            medium.LongestCommonSubsequence("abc", "def");
+            /*
             hard.MinCostII(new int[][] { new int[] { 1, 5, 3 }, new int[] { 2, 9, 4 }});
             hard.MinCostII(new int[][] { new int[] { 17, 2, 17 }, new int[] { 8, 4, 10 }, new int[] { 6, 3, 19 }, new int[] { 4, 8, 12 } });
 
             hard.MinCostII(new int[][] { new int[] { 3, 5, 3 }, new int[] { 6, 17, 6 }, new int[] { 7, 13, 18 }, new int[] { 9, 10, 18 } });
             hard.MinCostII(new int[][] { new int[] { 7, 6, 2 } });
+            *
             /*
 			 * ["MedianFinder","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian","addNum","findMedian"]
 [[],[-1],[],[-2],[],[-3],[],[-4],[],[-5],[]]
