@@ -23,9 +23,9 @@ namespace online_judge.leetcode.medium
                 result[cnt] = new int[text2.Length + 1]; 
             }
 
-            for (int i = 1; i < text1.Length; i++)
+            for (int i = 1; i <= text1.Length; i++)
             {
-                for (int j = 1; j < text2.Length; j++)
+                for (int j = 1; j <= text2.Length; j++)
                 {
                     if (text1[i - 1] == text2[j - 1])
                     {

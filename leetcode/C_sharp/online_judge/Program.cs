@@ -20,7 +20,22 @@ namespace online_judge
 				}
 			*/
 
+            var nomura1 = new online_judge.leetcode.tests.Nomura1();
+            //nomura1.solution(234156);
+            //nomura1.solution(100);
 
+            var nomura3 = new online_judge.leetcode.tests.Nomura3();
+
+            nomura3.solution(new int[] { 1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2 });
+
+            //nomura1.solution(234156);
+            //nomura2.solution(-8000);
+            //nomura2.solution(-7999);
+            //nomura2.solution(670);
+            //nomura2.solution(0);
+            //nomura2.solution(1);
+            //nomura2.solution(9);
+            //nomura2.solution(-999);
             var easy = new online_judge.leetcode.easy.Problem2446();
             var medium = new online_judge.leetcode.medium.Problem1143();
 
