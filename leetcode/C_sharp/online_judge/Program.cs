@@ -12,6 +12,13 @@ namespace online_judge
     {
         static void Main(string[] args)
         {
+            // 自分の得意な言語で
+            // Let's チャレンジ！！
+            var line1 = Console.ReadLine();
+            var line2 = Console.ReadLine();
+            Console.WriteLine($"{int.Parse(line1) * int.Parse(line2)}");
+
+
             /*
 				string[] lines = File.ReadAllLines(@"input.txt");
 				foreach (string line in lines)
