@@ -14,9 +14,9 @@ namespace online_judge
         {
             // 自分の得意な言語で
             // Let's チャレンジ！！
-            var line1 = Console.ReadLine();
-            var line2 = Console.ReadLine();
-            Console.WriteLine($"{int.Parse(line1) * int.Parse(line2)}");
+            //var line1 = Console.ReadLine();
+            //var line2 = Console.ReadLine();
+            //Console.WriteLine($"{int.Parse(line1) * int.Parse(line2)}");
 
 
             /*
@@ -27,13 +27,12 @@ namespace online_judge
 				}
 			*/
 
-            var nomura1 = new online_judge.leetcode.tests.Nomura1();
+            //var nomura1 = new online_judge.leetcode.tests.Nomura1();
             //nomura1.solution(234156);
             //nomura1.solution(100);
 
-            var nomura3 = new online_judge.leetcode.tests.Nomura3();
-
-            nomura3.solution(new int[] { 1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2 });
+            //var nomura3 = new online_judge.leetcode.tests.Nomura3();
+            //nomura3.solution(new int[] { 1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2 });
 
             //nomura1.solution(234156);
             //nomura2.solution(-8000);
@@ -44,14 +43,14 @@ namespace online_judge
             //nomura2.solution(9);
             //nomura2.solution(-999);
             var easy = new online_judge.leetcode.easy.Problem2446();
-            var medium = new online_judge.leetcode.medium.Problem1143();
+            var medium = new online_judge.leetcode.medium.Problem122();
 
             var hard = new online_judge.leetcode.hard.Problem265();
             var explore = new online_judge.leetcode.explore.RecursionII();
             // [[17, 2, 17], [8, 4, 10], [6, 3, 19], [4, 8, 12]]
-            medium.LongestCommonSubsequence("abcde", "ace");
-            medium.LongestCommonSubsequence("abc", "abc");
-            medium.LongestCommonSubsequence("abc", "def");
+            medium.MaxProfit(new int[] { 0, 5, 5, 6, 2, 1, 1, 3 });
+            medium.MaxProfit(new int[] { 1, 2, 3, 4, 5 });
+            medium.MaxProfit(new int[] { 7, 6, 4, 3, 1 });
             /*
             hard.MinCostII(new int[][] { new int[] { 1, 5, 3 }, new int[] { 2, 9, 4 }});
             hard.MinCostII(new int[][] { new int[] { 17, 2, 17 }, new int[] { 8, 4, 10 }, new int[] { 6, 3, 19 }, new int[] { 4, 8, 12 } });
