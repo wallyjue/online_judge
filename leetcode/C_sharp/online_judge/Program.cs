@@ -43,14 +43,16 @@ namespace online_judge
             //nomura2.solution(9);
             //nomura2.solution(-999);
             var easy = new online_judge.leetcode.easy.Problem2446();
-            var medium = new online_judge.leetcode.medium.Problem122();
+            var medium = new online_judge.leetcode.medium.Problem221();
 
             var hard = new online_judge.leetcode.hard.Problem265();
             var explore = new online_judge.leetcode.explore.RecursionII();
             // [[17, 2, 17], [8, 4, 10], [6, 3, 19], [4, 8, 12]]
-            medium.MaxProfit(new int[] { 0, 5, 5, 6, 2, 1, 1, 3 });
-            medium.MaxProfit(new int[] { 1, 2, 3, 4, 5 });
-            medium.MaxProfit(new int[] { 7, 6, 4, 3, 1 });
+            medium.MaximalSquare(new char[][] { 
+                new char[] { '1', '0', '1', '0', '0' }, 
+                new char[] { '1', '0', '1', '1', '1' },
+                new char[] { '1', '1', '1', '1', '1' },
+                new char[] { '1', '0', '0', '1', '0' }});
             /*
             hard.MinCostII(new int[][] { new int[] { 1, 5, 3 }, new int[] { 2, 9, 4 }});
             hard.MinCostII(new int[][] { new int[] { 17, 2, 17 }, new int[] { 8, 4, 10 }, new int[] { 6, 3, 19 }, new int[] { 4, 8, 12 } });
