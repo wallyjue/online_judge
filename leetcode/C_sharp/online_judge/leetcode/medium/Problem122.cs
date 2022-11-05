@@ -8,6 +8,20 @@ namespace online_judge.leetcode.medium
 {
     internal class Problem122
     {
+        public int MaxProfit2(int[] prices)
+        {
+            int profit = 0;
+            for (int cnt = 1; cnt < prices.Length;cnt++)
+            {
+                if (prices[cnt] > prices[cnt - 1])
+                {
+                    profit = profit + prices[cnt] - prices[cnt - 1];
+                }
+            }
+
+            return profit;
+        }
+
         public int MaxProfit(int[] prices)
         {
             if (prices.Length == 1) return 0;

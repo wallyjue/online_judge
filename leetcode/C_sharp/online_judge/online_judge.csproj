@@ -12,8 +12,4 @@
     <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="hackerrank\" />
-  </ItemGroup>
-
 </Project>
