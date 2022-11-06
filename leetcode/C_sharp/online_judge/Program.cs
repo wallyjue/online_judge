@@ -1,4 +1,5 @@
-﻿using online_judge.leetcode;
+﻿using online_judge.hackerrank;
+using online_judge.leetcode;
 using online_judge.leetcode.easy;
 using online_judge.leetcode.hard;
 using online_judge.leetcode.medium;
@@ -44,19 +45,25 @@ namespace online_judge
             //nomura2.solution(9);
             //nomura2.solution(-999);
 
+            var tsmc = new TSMC();
+            tsmc.getString("bbcacad");
+            tsmc.getString("bdea");
+            tsmc.getString("abbbe");
+            tsmc.getString("ebbbaa");
             var easy = new online_judge.leetcode.easy.Problem136();
             var medium = new online_judge.leetcode.medium.Problem122();
 
             var hard = new online_judge.leetcode.hard.Problem265();
             var explore = new online_judge.leetcode.explore.RecursionII();
 
+            /*
             easy.SingleNumber(new int[] { 2, 2, 1 });
 
 
             medium.MaxProfit2(new int[] { 7, 1, 5, 3, 6,4 });
 
             medium.MaxProfit2(new int[] { 1, 1, 1, 3, 3, 3 });
-
+            */
             // [[17, 2, 17], [8, 4, 10], [6, 3, 19], [4, 8, 12]]
             /*
             medium.MaximalSquare(new char[][] { 
