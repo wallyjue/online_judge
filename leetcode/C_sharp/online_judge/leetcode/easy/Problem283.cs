@@ -9,6 +9,25 @@ namespace online_judge.leetcode.easy
 {
     internal class Problem283
     {
+        public void MoveZeroes2(int[] nums)
+        {
+            int ptr = 0;
+            for (int cnt = 0; cnt < nums.Length;cnt++)
+            {
+                if (nums[cnt] != 0)
+                {
+                    nums[ptr++] = nums[cnt];
+                }
+            }
+            while (ptr < nums.Length)
+            {
+                nums[ptr++] = 0;
+            }
+        }
+
+
+
+
         public void MoveZeroes(int[] nums)
         {
             int ptr = 0, nonzeroPtr = 0;
