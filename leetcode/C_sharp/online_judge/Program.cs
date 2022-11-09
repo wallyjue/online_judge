@@ -5,6 +5,7 @@ using online_judge.leetcode.hard;
 using online_judge.leetcode.medium;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 
@@ -44,13 +45,19 @@ namespace online_judge
             //nomura2.solution(1);
             //nomura2.solution(9);
             //nomura2.solution(-999);
-
+            /*
             var tsmc = new TSMC();
             tsmc.getString("bbcacad");
             tsmc.getString("bdea");
             tsmc.getString("abbbe");
             tsmc.getString("ebbbaa");
-            var easy = new online_judge.leetcode.easy.Problem136();
+            */
+            var easy = new online_judge.leetcode.easy.Problem350();
+
+            easy.Intersect(new int[] { 3,1,2 }, new int[] { 1,1 });
+            easy.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2});
+            easy.Intersect(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
+
             var medium = new online_judge.leetcode.medium.Problem122();
 
             var hard = new online_judge.leetcode.hard.Problem265();

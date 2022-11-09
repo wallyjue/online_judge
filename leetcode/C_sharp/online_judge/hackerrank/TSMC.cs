@@ -76,7 +76,7 @@ namespace online_judge.hackerrank
                             rightptr--;
                         }
                     }
-                    while()
+                    
                     left++;
                 }
                 else
