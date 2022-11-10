@@ -61,13 +61,14 @@ namespace online_judge.hackerrank
                             rightptr--;
                         }
 
-                        if (leftptr >= rightptr)
+                        if (leftptr == right || rightptr == left)
                         {
                             break;
                         }
 
                         // swap
-                        if (ret[leftptr] == leftchar && ret[rightptr] == rightchar)
+                        if (ret[leftptr] == leftchar && ret[rightptr] == rightchar ||
+                            ret[rightptr] == leftchar && ret[leftptr] == rightchar)
                         {
                             char temp = ret[leftptr];
                             ret[leftptr] = ret[rightptr];
@@ -76,8 +77,8 @@ namespace online_judge.hackerrank
                             rightptr--;
                         }
                     }
-                    
-                    left++;
+
+                    left = leftptr;
                 }
                 else
                 {
@@ -86,13 +87,6 @@ namespace online_judge.hackerrank
             }
 
             return ret.ToString();
-        }
-
-        private void swapchar(char c1, char c2)
-        {
-            char temp = c1;
-            c1 = c2;
-            c2 = temp;
         }
 
         public List<int> numBST(List<int> nodeValues)

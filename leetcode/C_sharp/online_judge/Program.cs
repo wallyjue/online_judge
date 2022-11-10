@@ -3,6 +3,7 @@ using online_judge.leetcode;
 using online_judge.leetcode.easy;
 using online_judge.leetcode.hard;
 using online_judge.leetcode.medium;
+using online_judge.leetcode.mockup;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -45,19 +46,47 @@ namespace online_judge
             //nomura2.solution(1);
             //nomura2.solution(9);
             //nomura2.solution(-999);
-            /*
+
+            var mock = new Test1();
+            //mock.Intersection(new int[] { 3, 1, 2 }, new int[] { 1, 1 });
+            //mock.Intersection(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
+            //mock.Intersection(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
+
+
+            TreeNode treenode8 = new TreeNode(4);
+            TreeNode treenode7 = new TreeNode(7);
+            
+            
+            
+
+            TreeNode treenode6 = new TreeNode(8);
+            TreeNode treenode5 = new TreeNode(0);
+            TreeNode treenode2 = new TreeNode(1, treenode5, treenode6);
+
+            TreeNode treenode4 = new TreeNode(2, treenode7, treenode8);
+            TreeNode treenode3 = new TreeNode(6);
+            TreeNode treenode1 = new TreeNode(5, treenode3, treenode4);
+            TreeNode root = new TreeNode(3, treenode1, treenode2);
+            mock.SubtreeWithAllDeepest(root);
+
+
             var tsmc = new TSMC();
             tsmc.getString("bbcacad");
+            // aacbcbd
+            // aabcbcd
+
             tsmc.getString("bdea");
+            // adeb
+
             tsmc.getString("abbbe");
             tsmc.getString("ebbbaa");
-            */
+            
             var easy = new online_judge.leetcode.easy.Problem350();
-
+            /*
             easy.Intersect(new int[] { 3,1,2 }, new int[] { 1,1 });
             easy.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2});
             easy.Intersect(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
-
+            */
             var medium = new online_judge.leetcode.medium.Problem122();
 
             var hard = new online_judge.leetcode.hard.Problem265();
