@@ -67,9 +67,9 @@ namespace online_judge
             TreeNode treenode3 = new TreeNode(6);
             TreeNode treenode1 = new TreeNode(5, treenode3, treenode4);
             TreeNode root = new TreeNode(3, treenode1, treenode2);
-            mock.SubtreeWithAllDeepest(root);
+            //mock.SubtreeWithAllDeepest(root);
 
-
+            /*
             var tsmc = new TSMC();
             tsmc.getString("bbcacad");
             // aacbcbd
@@ -80,7 +80,7 @@ namespace online_judge
 
             tsmc.getString("abbbe");
             tsmc.getString("ebbbaa");
-            
+            */
             var easy = new online_judge.leetcode.easy.Problem350();
             /*
             easy.Intersect(new int[] { 3,1,2 }, new int[] { 1,1 });
