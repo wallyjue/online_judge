@@ -47,7 +47,11 @@ namespace online_judge
             //nomura2.solution(9);
             //nomura2.solution(-999);
 
-            var mock = new Test1();
+            var mock = new Test3();
+            mock.FindDisappearedNumbers(new int[] { 3, 1, 2 });
+            mock.FindDisappearedNumbers(new int[] { 1, 1, 2 });
+            mock.FindDisappearedNumbers(new int[] { 1, 1, 2,5,6,7,8,3 });
+
             //mock.Intersection(new int[] { 3, 1, 2 }, new int[] { 1, 1 });
             //mock.Intersection(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
             //mock.Intersection(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
