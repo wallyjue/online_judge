@@ -46,11 +46,12 @@ namespace online_judge
             //nomura2.solution(1);
             //nomura2.solution(9);
             //nomura2.solution(-999);
-
-            var mock = new Test3();
-            mock.FindDisappearedNumbers(new int[] { 3, 1, 2 });
-            mock.FindDisappearedNumbers(new int[] { 1, 1, 2 });
-            mock.FindDisappearedNumbers(new int[] { 1, 1, 2,5,6,7,8,3 });
+            var tsmc2 = new TSMC2();
+            //tsmc2.bestSumKStar(6, new List<int>() { 0, 1, 1, 3, 3, 4 },
+            //    new List<int>() { 1, 2, 3, 4, 5, 1 },
+            //    new List<int>() { -3,-2,-3, -4,-5,-6 },
+            //    3);
+            tsmc2.applyOperations2(new List<int> { 3, 4, 2, 6, 5 });
 
             //mock.Intersection(new int[] { 3, 1, 2 }, new int[] { 1, 1 });
             //mock.Intersection(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
