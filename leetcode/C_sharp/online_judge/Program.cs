@@ -40,10 +40,8 @@ namespace online_judge
                 1000000);
             */
 
-            var mock = new Test4();
-            mock.FindUnsortedSubarray(new int[] { 2,1 });
-            mock.FindUnsortedSubarray(new int[] { 3,2,1 });
-            mock.FindUnsortedSubarray(new int[] { 1 });
+            var test = new Exa();
+            test.Solution(null);
 
             //var nomura1 = new online_judge.leetcode.tests.Nomura1();
             //nomura1.solution(234156);
