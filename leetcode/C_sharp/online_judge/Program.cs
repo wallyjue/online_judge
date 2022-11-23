@@ -4,6 +4,7 @@ using online_judge.leetcode.easy;
 using online_judge.leetcode.hard;
 using online_judge.leetcode.medium;
 using online_judge.leetcode.mockup;
+using online_judge.leetcode.weekly;
 using online_judge.takeaway.bitFlyer;
 using System;
 using System.Collections.Generic;
@@ -38,6 +39,11 @@ namespace online_judge
                 new double[] { 0.0887 , 0.1856 , 0.2307 , 0.1522, 0.0532, 0.0250, 0.1409, 0.2541, 0.1147, 0.2660, 0.2933, 0.0686 }, 
                 1000000);
             */
+
+            var mock = new Test4();
+            mock.FindUnsortedSubarray(new int[] { 2,1 });
+            mock.FindUnsortedSubarray(new int[] { 3,2,1 });
+            mock.FindUnsortedSubarray(new int[] { 1 });
 
             //var nomura1 = new online_judge.leetcode.tests.Nomura1();
             //nomura1.solution(234156);
