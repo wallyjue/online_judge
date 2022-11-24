@@ -40,8 +40,10 @@ namespace online_judge
                 1000000);
             */
 
-            var test = new Exa();
-            test.Solution(null);
+            var test = new Rakuten1();
+            test.solution(6,1,1);
+            test.solution(1, 3, 1);
+            test.solution(0, 1, 8);
 
             //var nomura1 = new online_judge.leetcode.tests.Nomura1();
             //nomura1.solution(234156);
