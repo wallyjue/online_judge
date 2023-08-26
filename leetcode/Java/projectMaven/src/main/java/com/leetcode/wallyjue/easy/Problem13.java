@@ -1,4 +1,6 @@
-class Solution {
+package com.leetcode.wallyjue.easy;
+
+class Problem13 {
     public int romanToInt(String s) {
         int ret = 0;
         char prev = 'a';
