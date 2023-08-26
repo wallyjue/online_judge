@@ -1,6 +1,4 @@
-package com.leetcode.wallyjue.easy;
-
-public class Problem13 {
+class Solution {
     public int romanToInt(String s) {
         int ret = 0;
         char prev = 'a';
@@ -83,5 +81,6 @@ public class Problem13 {
             }
         }
         return ret;
+
     }
 }
