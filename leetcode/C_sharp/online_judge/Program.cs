@@ -18,20 +18,6 @@ namespace online_judge
     {
         static void Main(string[] args)
         {
-            // 自分の得意な言語で
-            // Let's チャレンジ！！
-            //var line1 = Console.ReadLine();
-            //var line2 = Console.ReadLine();
-            //Console.WriteLine($"{int.Parse(line1) * int.Parse(line2)}");
-
-
-            /*
-				string[] lines = File.ReadAllLines(@"input.txt");
-				foreach (string line in lines)
-				{
-					Console.WriteLine(line);
-				}
-			*/
             /*
             var quiz = new btcQuiz();
             quiz.MaxProfit(
@@ -40,44 +26,8 @@ namespace online_judge
                 1000000);
             */
 
-            var test = new Rakuten1();
-            test.solution(6,1,1);
-            test.solution(1, 3, 1);
-            test.solution(0, 1, 8);
-
-            //var nomura1 = new online_judge.leetcode.tests.Nomura1();
-            //nomura1.solution(234156);
-            //nomura1.solution(100);
-
-            //var nomura3 = new online_judge.leetcode.tests.Nomura3();
-            //nomura3.solution(new int[] { 1, 3, 2, 1, 2, 1, 5, 3, 3, 4, 2 });
-
-            //nomura1.solution(234156);
-            //nomura2.solution(-8000);
-            //nomura2.solution(-7999);
-            //nomura2.solution(670);
-            //nomura2.solution(0);
-            //nomura2.solution(1);
-            //nomura2.solution(9);
-            //nomura2.solution(-999);
-            var tsmc2 = new TSMC2();
-            //tsmc2.bestSumKStar(6, new List<int>() { 0, 1, 1, 3, 3, 4 },
-            //    new List<int>() { 1, 2, 3, 4, 5, 1 },
-            //    new List<int>() { -3,-2,-3, -4,-5,-6 },
-            //    3);
-            tsmc2.applyOperations2(new List<int> { 3, 4, 2, 6, 5 });
-
-            //mock.Intersection(new int[] { 3, 1, 2 }, new int[] { 1, 1 });
-            //mock.Intersection(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
-            //mock.Intersection(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
-
-
             TreeNode treenode8 = new TreeNode(4);
             TreeNode treenode7 = new TreeNode(7);
-            
-            
-            
-
             TreeNode treenode6 = new TreeNode(8);
             TreeNode treenode5 = new TreeNode(0);
             TreeNode treenode2 = new TreeNode(1, treenode5, treenode6);
